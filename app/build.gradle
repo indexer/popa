@@ -60,7 +60,7 @@ android {
 }
 
 dependencies {
-
+    compile 'com.google.android.gms:play-services:3.2.+'
     compile 'com.android.support:support-v4:19.+'
     compile 'com.android.support:appcompat-v7:19.+'
     compile 'com.squareup.retrofit:retrofit:1.5.1'

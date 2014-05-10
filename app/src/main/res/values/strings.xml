@@ -13,7 +13,7 @@
     <!-- api url -->
     <string name="api_url"></string>
     <!-- map key -->
-
+    <string name="googlemap">AIzaSyB-TEbetJGtMynHePC4nZmZ-E_wZ1j4XdY</string>
     <string name="title_activity_base_popa">BasePopaActivity</string>
 
 </resources>

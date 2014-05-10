@@ -8,6 +8,12 @@
         revision="19.0.0"
         sha1="c1e4371cd007644db260a6181f1084d33fb79e2b"/>
     <item
+        dex="/home/yemonkyaw/Documents/Personal Android/hellotaxi/app/build/pre-dexed/beta/classes-fccbfbd3067d380a486c3fd1135ac64ebc58b04b.jar"
+        jar="/home/yemonkyaw/Documents/Personal Android/hellotaxi/build/exploded-aar/com.google.android.gms/play-services/3.2.65/classes.jar"
+        jumboMode="false"
+        revision="19.0.0"
+        sha1="23023656ba91dc12e963cf7d5682db5d2aba6262"/>
+    <item
         dex="/home/yemonkyaw/Documents/Personal Android/hellotaxi/app/build/pre-dexed/beta/gson-2.2.4-554ed1f285145b9c2d8f428192568255269f69b4.jar"
         jar="/home/yemonkyaw/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.2.4/a60a5e993c98c864010053cb901b7eab25306568/gson-2.2.4.jar"
         jumboMode="false"

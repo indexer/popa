@@ -18,8 +18,9 @@ package com.indexer.hellotaxi.app.Module;
 import android.content.Context;
 
 import com.indexer.hellotaxi.app.Base.BasePopaActivity;
+import com.indexer.hellotaxi.app.ForActivity;
 import com.indexer.hellotaxi.app.ui.ActivityTitleController;
-import com.indexer.hellotaxi.app.ui.MainActivity;
+import com.indexer.hellotaxi.app.ui.MainActivity_;
 
 import javax.inject.Singleton;
 
@@ -33,7 +34,7 @@ import dagger.Provides;
  */
 @Module(
         injects = {
-                MainActivity.class,
+                MainActivity_.class,
         },
         addsTo = AndroidModule.class,
         library = true
@@ -46,8 +47,14 @@ public class ActivityModule {
     }
 
 
+    @Provides @Singleton @ForActivity
+    Context provideActivityContext() {
+        return activity;
+    }
+
     @Provides @Singleton
-    ActivityTitleController provideTitleController() {
+    ActivityTitleController
+    provideTitleController() {
         return new ActivityTitleController(activity);
     }
 
