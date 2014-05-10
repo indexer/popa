@@ -4,6 +4,12 @@
     <string name="app_name">Popa</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    
+    <!---button-->
+    <string name="Signup">Sing Up</string>
+    <string name="Find">Find</string>
+    <string name="Call">Call</string>
+    
 
     <!--api url-->
     <string name="api_url"></string>

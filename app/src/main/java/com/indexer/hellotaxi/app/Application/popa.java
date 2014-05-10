@@ -13,7 +13,6 @@ public class popa extends Application {
 
     ObjectGraph objectGraph;
 
-    objectGraph = ObjectGraph.get();
 
     public ObjectGraph getObjectGraph() {
         return objectGraph;
