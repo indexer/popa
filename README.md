@@ -7,7 +7,7 @@ Using Libiary
 =============
 Now i am using Android annotation and Dagger 
 
-https://github.com/excilys/androidannotations for Injection Views
+https://github.com/excilys/androidannotation ( an Open Source framework that speeds up Android development )
 
 https://github.com/square/dagger (A fast dependency injector for Android and Java) 
 
@@ -27,6 +27,8 @@ How to Build This Application
 ==============================
 git clone git@github.com:indexer/popa.git
 clone with this command and input in the Android Studio and sync with the gradle
+
+
 
 
 
