@@ -4,6 +4,14 @@
     tools:context="com.indexer.hellotaxi.app.MainActivity" >
     <item android:id="@+id/action_settings"
         android:title="@string/action_settings"
+        android:icon="@drawable/ic_launcher"
         android:orderInCategory="100"
-        app:showAsAction="never" />
+        app:showAsAction="ifRoom" />
+
+    <item android:id="@+id/action_add"
+        android:title="@string/action_settings"
+        android:icon="@android:drawable/ic_input_add"
+        android:orderInCategory="100"
+        app:showAsAction="ifRoom" />
+
 </menu>
