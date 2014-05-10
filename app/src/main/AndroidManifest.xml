@@ -23,7 +23,7 @@
 
     <meta-data
         android:name="com.google.android.maps.v2.API_KEY"
-        android:value="@string/googlemap"/>
+        android:value="AIzaSyB-TEbetJGtMynHePC4nZmZ-E_wZ1j4XdY"/>
 
     <application
         android:name="com.indexer.hellotaxi.app.Application.popa_"

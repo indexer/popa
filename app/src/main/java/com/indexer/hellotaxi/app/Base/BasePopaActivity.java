@@ -1,9 +1,9 @@
 package com.indexer.hellotaxi.app.Base;
 
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.ActionBarActivity;
 
+import com.google.android.gms.maps.GoogleMap;
 import com.indexer.hellotaxi.app.Application.popa;
 import com.indexer.hellotaxi.app.Module.ActivityModule;
 
@@ -14,16 +14,20 @@ import dagger.ObjectGraph;
 
 public abstract class BasePopaActivity extends ActionBarActivity {
     private ObjectGraph activityGraph;
+    private GoogleMap mMap;
+
 
     @Override
     protected void onCreate(Bundle saveInstanceState) {
-      super.onCreate(saveInstanceState);
-        popa application = (popa)getApplication();
+        super.onCreate(saveInstanceState);
+        popa application = (popa) getApplication();
         activityGraph = application.getObjectGraph().plus(getModules().toArray());
         activityGraph.inject(this);
+
     }
 
-    @Override protected void onDestroy() {
+    @Override
+    protected void onDestroy() {
         // Eagerly clear the reference to the activity graph to allow it to be garbage collected as
         // soon as possible.
         activityGraph = null;
@@ -35,7 +39,9 @@ public abstract class BasePopaActivity extends ActionBarActivity {
         return Arrays.<Object>asList(new ActivityModule(this));
     }
 
-    /** Inject the supplied {@code object} using the activity-specific graph. */
+    /**
+     * Inject the supplied {@code object} using the activity-specific graph.
+     */
     public void inject(Object object) {
         activityGraph.inject(object);
     }

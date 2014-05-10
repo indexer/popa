@@ -47,12 +47,15 @@ public class ActivityModule {
     }
 
 
-    @Provides @Singleton @ForActivity
+    @Provides
+    @Singleton
+    @ForActivity
     Context provideActivityContext() {
         return activity;
     }
 
-    @Provides @Singleton
+    @Provides
+    @Singleton
     ActivityTitleController
     provideTitleController() {
         return new ActivityTitleController(activity);
