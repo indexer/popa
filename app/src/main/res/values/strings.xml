@@ -5,4 +5,8 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
 
+    <!--api url-->
+    <string name="api_url"></string>
+    <!--map key-->
+
 </resources>

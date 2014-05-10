@@ -3,6 +3,7 @@ package com.indexer.hellotaxi.app.Application;
 import android.app.Application;
 
 import org.androidannotations.annotations.EApplication;
+import dagger.ObjectGraph;
 
 /**
  * Created by yemonkyaw on 5/10/14.
@@ -10,4 +11,14 @@ import org.androidannotations.annotations.EApplication;
 @EApplication
 public class popa extends Application {
 
+    ObjectGraph objectGraph;
+
+    objectGraph = ObjectGraph.get();
+
+    public ObjectGraph getObjectGraph() {
+        return objectGraph;
+    }
+
 }
+
+
