@@ -52,7 +52,7 @@ public abstract class BasePopaActivity extends FragmentActivity {
         }
         mMap = ((SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map)).getMap();
         if (mMap != null) {
-            startDemo();
+            startActiviy();
         }
     }
 
@@ -60,7 +60,7 @@ public abstract class BasePopaActivity extends FragmentActivity {
     /**
      * Run the demo-specific code.
      */
-    protected abstract void startDemo();
+    protected abstract void startActiviy();
 
     protected GoogleMap getMap() {
         setUpMapIfNeeded();

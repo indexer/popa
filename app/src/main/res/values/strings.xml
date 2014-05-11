@@ -19,4 +19,7 @@
     <string name="googlemap">AIzaSyB-TEbetJGtMynHePC4nZmZ-E_wZ1j4XdY</string>
     <string name="title_activity_base_popa">BasePopaActivity</string>
 
+    <!--map Title -->
+    <string name="nearby">Near By Taxi :</string>
+
 </resources>
