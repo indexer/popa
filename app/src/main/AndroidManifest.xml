@@ -17,13 +17,7 @@
         android:glEsVersion="0x00020000"
         android:required="true"/>
 
-    <meta-data
-        android:name="com.google.android.gms.version"
-        android:value="@integer/google_play_services_version" />
 
-    <meta-data
-        android:name="com.google.android.maps.v2.API_KEY"
-        android:value="AIzaSyB-TEbetJGtMynHePC4nZmZ-E_wZ1j4XdY"/>
 
     <application
         android:name="com.indexer.hellotaxi.app.Application.popa_"
@@ -31,6 +25,15 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyB-TEbetJGtMynHePC4nZmZ-E_wZ1j4XdY"/>
+
         <activity
             android:name="com.indexer.hellotaxi.app.ui.MainActivity_"
             android:label="@string/app_name"
