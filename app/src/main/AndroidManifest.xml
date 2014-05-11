@@ -32,7 +32,7 @@
 
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
-            android:value="AIzaSyB-TEbetJGtMynHePC4nZmZ-E_wZ1j4XdY"/>
+            android:value="@string/googlemap"/>
 
         <activity
             android:name="com.indexer.hellotaxi.app.ui.MainActivity_"

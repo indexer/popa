@@ -12,6 +12,9 @@
 
     <!-- api url -->
     <string name="api_url"></string>
+    <!--Lat & Lng-->
+    <string name="latitude"></string>
+    <string name="longtitude"></string>
     <!-- map key -->
     <string name="googlemap">AIzaSyB-TEbetJGtMynHePC4nZmZ-E_wZ1j4XdY</string>
     <string name="title_activity_base_popa">BasePopaActivity</string>

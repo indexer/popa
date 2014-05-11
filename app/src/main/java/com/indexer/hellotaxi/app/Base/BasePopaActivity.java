@@ -56,6 +56,7 @@ public abstract class BasePopaActivity extends FragmentActivity {
         }
     }
 
+
     /**
      * Run the demo-specific code.
      */

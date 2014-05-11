@@ -54,6 +54,7 @@ public class ActivityModule {
         return activity;
     }
 
+
     @Provides
     @Singleton
     ActivityTitleController
