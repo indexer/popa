@@ -4,6 +4,7 @@ import android.content.Context;
 import android.location.Location;
 import android.location.LocationManager;
 import android.view.Menu;
+import android.view.MenuInflater;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
@@ -32,7 +33,8 @@ public class MainActivity extends BasePopaActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.main, menu);
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.main, menu);
         return true;
     }
 
@@ -72,7 +74,6 @@ public class MainActivity extends BasePopaActivity {
                 icon(BitmapDescriptorFactory.fromResource(R.drawable.taxi)).
                 position(position).
                 anchor(iconFactory.getAnchorU(), iconFactory.getAnchorV());
-
         getMap().addMarker(markerOptions);
     }
 }

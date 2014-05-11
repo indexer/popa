@@ -22,6 +22,6 @@
     <!-- map Title -->
     <string name="nearby">Near By Taxi :</string>
     <string name="hello_blank_fragment">Hello</string>
-    <string name="title_activity_call">CallActivity</string>
+    <string name="title_activity_call">Call The Taxi</string>
 
 </resources>
