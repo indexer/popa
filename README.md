@@ -29,6 +29,8 @@ git clone git@github.com:indexer/popa.git
 clone with this command and input in the Android Studio and sync with the gradle
 
 
+![Alt text] https://www.dropbox.com/s/pvufnhrxy1qbi6t/b8ff5c8a-7e37-4471-b315-febee557e2eb.png?m=
+
 
 
 
