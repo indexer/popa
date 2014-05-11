@@ -39,12 +39,6 @@ public class MainActivity extends BasePopaActivity {
     }
 
     @Override
-    protected void onResume() {
-        super.onResume();
-        locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 400, 1, mlocationListener);
-    }
-
-    @Override
     @UiThread
     protected void startActiviy() {
 

@@ -1,27 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="app_name">Popa</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-
     <!-- -button -->
     <string name="Signup">Sing Up</string>
     <string name="Find">Find</string>
     <string name="Call">Call</string>
-
     <!-- api url -->
     <string name="api_url"></string>
-    <!-- Lat & Lng -->
-    <string name="latitude"></string>
-    <string name="longtitude"></string>
     <!-- map key -->
     <string name="googlemap">AIzaSyB-TEbetJGtMynHePC4nZmZ-E_wZ1j4XdY</string>
     <string name="title_activity_base_popa">BasePopaActivity</string>
-
     <!-- map Title -->
     <string name="nearby">Near By Taxi :</string>
     <string name="hello_blank_fragment">Hello</string>
     <string name="title_activity_call">Call The Taxi</string>
-
 </resources>

@@ -1,13 +1,11 @@
 package com.indexer.hellotaxi.app.ui;
 
 import android.app.Activity;
-
+import android.view.MenuItem;
 import com.indexer.hellotaxi.app.R;
 
 import org.androidannotations.annotations.AfterInject;
-import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EActivity;
-import org.androidannotations.annotations.ItemClick;
 import org.androidannotations.annotations.res.StringRes;
 
 import javax.inject.Inject;
@@ -28,15 +26,20 @@ public class CallActivity extends Activity {
         getActionBar().setTitle(title);
     }
 
-    @Click(android.R.id.home)
-    public void back() {
-        this.onBackPressed();
-    }
-
     @Override
     public void onResume() {
         super.onResume();
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                this.onBackPressed();
+                finish();
+                return false;
+        }
+        return false;
+    }
 
 }
