@@ -2,6 +2,12 @@
 <pre-dex-items>
 
     <item
+        dex="/home/yemonkyaw/Documents/Personal Android/hellotaxi/app/build/pre-dexed/beta/classes-de47f0b8e2fdba71d1963c981c5da4bd0a8535e8.jar"
+        jar="/home/yemonkyaw/Documents/Personal Android/hellotaxi/build/exploded-aar/com.google.maps.android/android-maps-utils/0.2.1/classes.jar"
+        jumboMode="false"
+        revision="19.0.0"
+        sha1="703880406560955996b22cb757542b00840f24c9"/>
+    <item
         dex="/home/yemonkyaw/Documents/Personal Android/hellotaxi/app/build/pre-dexed/beta/androidannotations-api-3.0-579c321a3011ade04b0002d14bbd8c0527605c6d.jar"
         jar="/home/yemonkyaw/.gradle/caches/modules-2/files-2.1/org.androidannotations/androidannotations-api/3.0/c1e4371cd007644db260a6181f1084d33fb79e2b/androidannotations-api-3.0.jar"
         jumboMode="false"
