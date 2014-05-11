@@ -12,14 +12,16 @@
 
     <!-- api url -->
     <string name="api_url"></string>
-    <!--Lat & Lng-->
+    <!-- Lat & Lng -->
     <string name="latitude"></string>
     <string name="longtitude"></string>
     <!-- map key -->
     <string name="googlemap">AIzaSyB-TEbetJGtMynHePC4nZmZ-E_wZ1j4XdY</string>
     <string name="title_activity_base_popa">BasePopaActivity</string>
 
-    <!--map Title -->
+    <!-- map Title -->
     <string name="nearby">Near By Taxi :</string>
     <string name="hello_blank_fragment">Hello</string>
+    <string name="title_activity_call">CallActivity</string>
+
 </resources>

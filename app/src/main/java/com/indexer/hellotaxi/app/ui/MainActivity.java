@@ -1,21 +1,18 @@
 package com.indexer.hellotaxi.app.ui;
 
-import android.app.Fragment;
-import android.app.FragmentTransaction;
 import android.content.Context;
 import android.location.Location;
 import android.location.LocationManager;
 import android.view.Menu;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
-import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.maps.android.ui.IconGenerator;
 import com.indexer.hellotaxi.app.Application.popa_;
 import com.indexer.hellotaxi.app.Base.BasePopaActivity;
+import com.indexer.hellotaxi.app.Listener.mapMarkerListener;
 import com.indexer.hellotaxi.app.Listener.mlocationListener;
 import com.indexer.hellotaxi.app.R;
 
@@ -30,6 +27,7 @@ public class MainActivity extends BasePopaActivity {
     LocationManager locationManager;
     popa_ Popa;
     mlocationListener mlocationListener = new mlocationListener();
+    mapMarkerListener mapMarkerListener = new mapMarkerListener(this);
 
 
     @Override
@@ -64,14 +62,8 @@ public class MainActivity extends BasePopaActivity {
 
         addIcon(iconFactory, new LatLng(location.getLatitude() +
                 0.00002, location.getLongitude() + 0.0005));
+        getMap().setOnMarkerClickListener(mapMarkerListener);
 
-        getMap().setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
-            @Override
-            public boolean onMarkerClick(Marker marker) {
-
-                return false;
-            }
-        });
     }
 
 

@@ -34,7 +34,7 @@ import dagger.Provides;
  */
 @Module(
         injects = {
-                MainActivity_.class,
+                MainActivity_.class
         },
         addsTo = AndroidModule.class,
         library = true
@@ -53,6 +53,7 @@ public class ActivityModule {
     Context provideActivityContext() {
         return activity;
     }
+
 
 
     @Provides
