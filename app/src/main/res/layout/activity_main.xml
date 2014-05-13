@@ -26,8 +26,8 @@
             android:layout_marginLeft="@dimen/liner"
             android:id="@+id/taxiDriver"
             android:src="@drawable/defaultusericon"
-            android:layout_width="50dp"
-            android:layout_height="50dp" />
+            android:layout_width="130dp"
+            android:layout_height="130dp" />
         <TextView
             android:layout_marginTop="@dimen/activity_vertical_margin"
             android:layout_toEndOf="@id/taxiDriver"
@@ -40,8 +40,10 @@
             android:layout_height="wrap_content" />
 
         <TextView
+            android:id="@+id/Rate"
             android:drawableLeft="@android:drawable/star_on"
             android:layout_below="@+id/taxiDriverName"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
             android:gravity="center"
             android:layout_toEndOf="@id/taxiDriver"
@@ -52,9 +54,10 @@
             android:layout_height="wrap_content" />
 
         <TextView
-            android:layout_below="@+id/taxiDriver"
+            android:layout_below="@+id/Rate"
             android:id="@+id/taxiType"
-            android:layout_marginLeft="@dimen/liner"
+            android:layout_toEndOf="@id/taxiDriver"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
             android:layout_marginTop="@dimen/activity_vertical_margin"
             android:text="Car Type"
             android:textSize="14sp"
@@ -64,7 +67,7 @@
 
         <TextView
             android:layout_toEndOf="@+id/taxiType"
-            android:layout_below="@+id/taxiDriver"
+            android:layout_below="@+id/Rate"
             android:layout_marginTop="@dimen/activity_vertical_margin"
             android:id="@+id/taxiTypeCar"
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
@@ -76,7 +79,8 @@
         <TextView
             android:layout_below="@+id/taxiType"
             android:id="@+id/taxiNo"
-            android:layout_marginLeft="@dimen/liner"
+            android:layout_toEndOf="@id/taxiDriver"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
             android:layout_marginTop="@dimen/activity_vertical_margin"
             android:text="Car Number"
             android:textSize="14sp"
