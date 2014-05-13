@@ -2,10 +2,12 @@ package com.indexer.hellotaxi.app.ui;
 
 import android.app.Activity;
 import android.view.MenuItem;
+
 import com.indexer.hellotaxi.app.R;
 
 import org.androidannotations.annotations.AfterInject;
 import org.androidannotations.annotations.EActivity;
+import org.androidannotations.annotations.OptionsMenu;
 import org.androidannotations.annotations.res.StringRes;
 
 import javax.inject.Inject;

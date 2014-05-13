@@ -18,11 +18,13 @@ import com.indexer.hellotaxi.app.Listener.mlocationListener;
 import com.indexer.hellotaxi.app.R;
 
 import org.androidannotations.annotations.EActivity;
+import org.androidannotations.annotations.OptionsMenu;
 import org.androidannotations.annotations.UiThread;
 
 import javax.inject.Inject;
 
 @EActivity
+@OptionsMenu(R.menu.main)
 public class MainActivity extends BasePopaActivity {
     @Inject
     LocationManager locationManager;
@@ -31,6 +33,7 @@ public class MainActivity extends BasePopaActivity {
 
 
     @Override
+    @UiThread
     protected void start() {
 
         locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
