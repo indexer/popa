@@ -26,39 +26,30 @@ import javax.inject.Inject;
 public class MainActivity extends BasePopaActivity {
     @Inject
     LocationManager locationManager;
-    popa_ Popa;
     mlocationListener mlocationListener = new mlocationListener();
-    mapMarkerListener mapMarkerListener = new mapMarkerListener(this);
 
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.main, menu);
-        return true;
-    }
 
     @Override
-    @UiThread
-    protected void startActiviy() {
+    protected void start() {
 
-        Location location = locationManager.getLastKnownLocation
-                (LocationManager.GPS_PROVIDER);
-        Popa = (popa_) getApplicationContext();
-        IconGenerator iconFactory = new IconGenerator(this);
-        getMap().moveCamera(CameraUpdateFactory.newLatLngZoom
-                (new LatLng(location.getLatitude(),
-                        location.getLongitude()), 13));
         locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
         locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0,
                 mlocationListener);
+        mapMarkerListener mapMarkerListener = new mapMarkerListener(this);
+        IconGenerator iconFactory = new IconGenerator(this);
         getMap().setMyLocationEnabled(true);
+        Location location = locationManager.getLastKnownLocation
+                (LocationManager.GPS_PROVIDER);
+        getMap().moveCamera(CameraUpdateFactory.newLatLngZoom
+                (new LatLng(location.getLatitude(),
+                        location.getLongitude()), 13));
         iconFactory.setStyle(IconGenerator.STYLE_GREEN);
         addIcon(iconFactory, new LatLng(location.getLatitude(), location.getLongitude()));
-
         addIcon(iconFactory, new LatLng(location.getLatitude() +
                 0.00002, location.getLongitude() + 0.0005));
         getMap().setOnMarkerClickListener(mapMarkerListener);
+
 
     }
 

@@ -26,6 +26,7 @@ public abstract class BasePopaActivity extends FragmentActivity {
     protected void onCreate(Bundle saveInstanceState) {
         super.onCreate(saveInstanceState);
         setContentView(getLayoutId());
+        setUpMapIfNeeded();
         popa application = (popa) getApplication();
         activityGraph = application.getObjectGraph().plus(getModules().toArray());
         activityGraph.inject(this);
@@ -35,7 +36,7 @@ public abstract class BasePopaActivity extends FragmentActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        setUpMapIfNeeded();
+          setUpMapIfNeeded();
     }
 
     @Override
@@ -52,7 +53,7 @@ public abstract class BasePopaActivity extends FragmentActivity {
         }
         mMap = ((SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map)).getMap();
         if (mMap != null) {
-            startActiviy();
+              start();
         }
     }
 
@@ -60,7 +61,7 @@ public abstract class BasePopaActivity extends FragmentActivity {
     /**
      * Run the demo-specific code.
      */
-    protected abstract void startActiviy();
+    protected abstract void start();
 
     protected GoogleMap getMap() {
         setUpMapIfNeeded();
