@@ -20,7 +20,6 @@ import android.content.Context;
 import com.indexer.hellotaxi.app.Base.BasePopaActivity;
 import com.indexer.hellotaxi.app.ForActivity;
 import com.indexer.hellotaxi.app.ui.ActivityTitleController;
-import com.indexer.hellotaxi.app.ui.CallActivity_;
 import com.indexer.hellotaxi.app.ui.MainActivity_;
 
 import javax.inject.Singleton;
@@ -36,7 +35,6 @@ import dagger.Provides;
 @Module(
         injects = {
                 MainActivity_.class,
-                CallActivity_.class
         },
         addsTo = AndroidModule.class,
         library = true

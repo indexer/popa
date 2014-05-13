@@ -9,6 +9,106 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:name="com.google.android.gms.maps.SupportMapFragment">
-</fragment>
+    <RelativeLayout
+        android:id="@+id/innerlayout"
+        android:visibility="gone"
+        android:layout_gravity="bottom|left"
+        android:layout_marginTop="@dimen/liner"
+        android:layout_marginLeft="@dimen/liner"
+        android:layout_marginBottom="@dimen/liner"
+        android:layout_marginRight="@dimen/liner"
+        android:background="@android:color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginLeft="@dimen/liner"
+            android:id="@+id/taxiDriver"
+            android:src="@drawable/defaultusericon"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+        <TextView
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_toEndOf="@id/taxiDriver"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:id="@+id/taxiDriverName"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:text="Swan Htet Aung"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:drawableLeft="@android:drawable/star_on"
+            android:layout_below="@+id/taxiDriverName"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:gravity="center"
+            android:layout_toEndOf="@id/taxiDriver"
+            android:layout_width="wrap_content"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:text="5"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_below="@+id/taxiDriver"
+            android:id="@+id/taxiType"
+            android:layout_marginLeft="@dimen/liner"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:text="Car Type"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_toEndOf="@+id/taxiType"
+            android:layout_below="@+id/taxiDriver"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:id="@+id/taxiTypeCar"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:text="Honda Fit"
+            android:textSize="@dimen/nearby"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_below="@+id/taxiType"
+            android:id="@+id/taxiNo"
+            android:layout_marginLeft="@dimen/liner"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:text="Car Number"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_toEndOf="@+id/taxiNo"
+            android:layout_below="@+id/taxiType"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:id="@+id/taxiCarNo"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:text="Honda Fit"
+            android:textSize="14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <Button
+            android:layout_below="@+id/taxiCarNo"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:background="#5FAB5D"
+            android:layout_marginLeft="@dimen/liner"
+            android:layout_marginRight="@dimen/liner"
+            android:layout_marginBottom="@dimen/liner"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:text="Book Now"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+  </fragment>
 
 </LinearLayout>

@@ -114,12 +114,3 @@ android.applicationVariants.all { variant ->
     }
 
 }
-dependencies {
-    compile 'com.android.support:appcompat-v7:19.+'
-}
-dependencies {
-    compile 'com.android.support:appcompat-v7:19.+'
-}
-dependencies {
-    compile 'com.android.support:appcompat-v7:19.+'
-}

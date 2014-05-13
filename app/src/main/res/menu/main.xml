@@ -1,17 +1,13 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.indexer.hellotaxi.app.ui.MainActivity" >
-
+  >
     <item android:id="@+id/action_add"
-        android:title="@string/action_settings"
+        android:title="@string/Signup"
         android:icon="@android:drawable/ic_input_add"
         android:orderInCategory="100"
-        app:showAsAction="ifRoom|withText" />
+        android:showAsAction="ifRoom|withText" />
 
     <item android:id="@+id/action_settings"
-        android:title="@string/action_settings"
-        android:icon="@android:drawable/ic_menu_help"
-        app:showAsAction="ifRoom|withText" />
+        android:title="@string/nearby"
+        android:showAsAction="ifRoom|withText" />
 
 </menu>

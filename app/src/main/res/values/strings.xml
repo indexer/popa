@@ -7,6 +7,7 @@
     <string name="Signup">Sing Up</string>
     <string name="Find">Find</string>
     <string name="Call">Call</string>
+
     <!-- api url -->
     <string name="api_url"></string>
     <!-- map key -->
@@ -14,6 +15,7 @@
     <string name="title_activity_base_popa">BasePopaActivity</string>
     <!-- map Title -->
     <string name="nearby">Near By Taxi :</string>
+    <string name="findtaxi">Find Taxi</string>
     <string name="hello_blank_fragment">Hello</string>
     <string name="title_activity_call">Call The Taxi</string>
 </resources>

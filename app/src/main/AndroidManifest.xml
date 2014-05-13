@@ -41,10 +41,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name="com.indexer.hellotaxi.app.ui.CallActivity_"
-            android:label="@string/title_activity_call" >
-        </activity>
+
     </application>
 
 </manifest>
