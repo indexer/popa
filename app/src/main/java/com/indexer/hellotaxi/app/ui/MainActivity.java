@@ -3,6 +3,7 @@ package com.indexer.hellotaxi.app.ui;
 import android.content.Context;
 import android.location.Location;
 import android.location.LocationManager;
+import android.widget.TextView;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
@@ -15,9 +16,11 @@ import com.indexer.hellotaxi.app.Listener.mlocationListener;
 import com.indexer.hellotaxi.app.R;
 
 import org.androidannotations.annotations.AfterInject;
+import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.OptionsMenu;
 import org.androidannotations.annotations.UiThread;
+import org.androidannotations.annotations.ViewById;
 import org.androidannotations.annotations.res.StringRes;
 
 import javax.inject.Inject;
@@ -31,6 +34,20 @@ public class MainActivity extends BasePopaActivity {
 
     @StringRes(R.string.findtaxi)
     String findTaxi;
+
+    @ViewById(R.id.taxiDriverName)
+    TextView txtDriverName;
+
+
+    @Click(R.id.innerlayout)
+    void changeCard() {
+        if(txtDriverName.getText().equals("Swan Htet Aung")) {
+            txtDriverName.setText("Arar Aung");
+        }else{
+            txtDriverName.setText("Swan Htet Aung");
+        }
+
+    }
 
     @AfterInject
     void title() {

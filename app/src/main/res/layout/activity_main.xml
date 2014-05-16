@@ -43,7 +43,7 @@
             android:id="@+id/Rate"
             android:drawableLeft="@android:drawable/star_on"
             android:layout_below="@+id/taxiDriverName"
-            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginTop="@dimen/circle"
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
             android:gravity="center"
             android:layout_toEndOf="@id/taxiDriver"
@@ -56,19 +56,23 @@
         <TextView
             android:layout_below="@+id/Rate"
             android:id="@+id/taxiType"
+            android:padding="2dp"
+            android:textColor="@android:color/white"
+            android:background="@drawable/circle_bg_blue"
             android:layout_toEndOf="@id/taxiDriver"
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
-            android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:text="Car Type"
+            android:layout_marginTop="@dimen/circle"
+            android:text="Type"
+            android:gravity="center"
             android:textSize="14sp"
             android:textStyle="bold"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="25dp" />
 
         <TextView
             android:layout_toEndOf="@+id/taxiType"
             android:layout_below="@+id/Rate"
-            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginTop="@dimen/circle"
             android:id="@+id/taxiTypeCar"
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
             android:text="Honda Fit"
@@ -79,27 +83,28 @@
         <TextView
             android:layout_below="@+id/taxiType"
             android:id="@+id/taxiNo"
+            android:textColor="@android:color/white"
+            android:background="@drawable/circle_bg"
             android:layout_toEndOf="@id/taxiDriver"
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
-            android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:text="Car Number"
+            android:layout_marginTop="@dimen/circle"
+            android:text="Number"
+            android:padding="2dp"
+            android:gravity="center"
             android:textSize="14sp"
             android:textStyle="bold"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
+            android:layout_height="25dp" />
         <TextView
             android:layout_toEndOf="@+id/taxiNo"
             android:layout_below="@+id/taxiType"
-            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginTop="@dimen/circle"
             android:id="@+id/taxiCarNo"
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
-            android:text="Honda Fit"
+            android:text="5D/123456"
             android:textSize="14sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
-
-
         <Button
             android:layout_below="@+id/taxiCarNo"
             android:layout_marginTop="@dimen/activity_vertical_margin"
