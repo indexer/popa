@@ -1,39 +1,41 @@
-popa
+Popa
 ====
-Popa is aim to solved user requirements in Yangon who want to hire taxi easily like GrabTaxi and Uber
-
+Popa aims to solved user requirements in Yangon who want to hire taxi easily like GrabTaxi and Uber.
 
 Using Libiary
-=============
-Now i am using Android annotation and Dagger 
+-------------
 
-https://github.com/excilys/androidannotation ( an Open Source framework that speeds up Android development )
+Now I am using Android annotation and Dagger 
 
-https://github.com/square/dagger (A fast dependency injector for Android and Java) 
+[Android Annotation](https://github.com/excilys/androidannotations) (An open source framework that speeds up Android development)
 
-and GoogleplayService for Showing map
+[Dagger](square.github.io/dagger) (A fast dependency injector for Android and Java) 
+
+[Google Play Service](http://developer.android.com/google/play-services/index.html) for Showing map
 
 
 To Do
-=============
-1.Write Good Readme for usage
-
-2.Verify the scope and design
-
-3.Database integrate
+-----
+* Verify the scope and design
+* Database integration
 
 
-How to Build This Application
-==============================
+Building the app
+-----------------
+* Clone the repo with this command and import into the Android Studio. 
+```bash
 git clone git@github.com:indexer/popa.git
-clone with this command and input in the Android Studio and sync with the gradle
+./gradlew clean
+./gradlew build
+```
+* Sync with gradle and you should be able to run the app.
+* You may encounter `NullPointerException` while running the app because of Google Maps. We're aware of that and trying several workarounds to solve it.
 
+Contributing
+------------
 
-
-
-
-
-
-
-
-
+ 1. Fork it
+ 2. Create your feature branch (`git checkout -b my-new-feature`)
+ 3. Commit your changes (`git commit -am 'Added some feature'`)
+ 4. Push to the branch (`git push origin my-new-feature`)
+ 5. Create new Pull Request
