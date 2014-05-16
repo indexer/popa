@@ -46,7 +46,6 @@ public class MainActivity extends BasePopaActivity {
         } else {
             txtDriverName.setText("Swan Htet Aung");
         }
-
     }
 
     @AfterInject
