@@ -41,9 +41,9 @@ public class MainActivity extends BasePopaActivity {
 
     @Click(R.id.innerlayout)
     void changeCard() {
-        if(txtDriverName.getText().equals("Swan Htet Aung")) {
+        if (txtDriverName.getText().equals("Swan Htet Aung")) {
             txtDriverName.setText("Arar Aung");
-        }else{
+        } else {
             txtDriverName.setText("Swan Htet Aung");
         }
 
@@ -76,7 +76,6 @@ public class MainActivity extends BasePopaActivity {
 
 
     }
-
 
     private void addIcon(IconGenerator iconFactory, String text, LatLng position) {
         MarkerOptions markerOptions = new MarkerOptions().
