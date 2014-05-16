@@ -19,7 +19,6 @@ To Do
 * Verify the scope and design
 * Database integration
 
-
 Building the app
 -----------------
 * Clone the repo with this command and import into the Android Studio. 
@@ -29,6 +28,14 @@ git clone git@github.com:indexer/popa.git
 ./gradlew build
 ```
 * Sync with gradle and you should be able to run the app.
+* Add your own [Google Maps API](https://developers.google.com/maps/documentation/android/start) Key by creating a String resource file with the following contents. Typically, the file should be under `app/src/main/res/values/`
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <!-- map key -->
+  <string name="googlemap"> Put your key here </string>
+</resources>
+```
 * You may encounter `NullPointerException` while running the app because of Google Maps. We're aware of that and trying several workarounds to solve it.
 
 Contributing

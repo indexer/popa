@@ -10,8 +10,7 @@
 
     <!-- api url -->
     <string name="api_url"></string>
-    <!-- map key -->
-    <string name="googlemap">AIzaSyCKrXxYu4LFdA-NtrfTytYQl5mIa5KZW98</string>
+
     <string name="title_activity_base_popa">BasePopaActivity</string>
     <!-- map Title -->
     <string name="nearby">Near By Taxi :</string>
