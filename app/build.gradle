@@ -6,12 +6,12 @@ buildscript {
         classpath 'com.android.tools.build:gradle:0.10.+'
     }
 }
-apply plugin: 'android'
 
+apply plugin: 'android'
 
 android {
     compileSdkVersion 19
-    buildToolsVersion '19.0.0'
+    buildToolsVersion '19.0.3'
 
     defaultConfig {
         minSdkVersion 15
@@ -56,7 +56,6 @@ android {
     lintOptions {
         abortOnError false
     }
-
 }
 
 dependencies {
@@ -65,8 +64,6 @@ dependencies {
     compile 'com.android.support:appcompat-v7:19.+'
     compile 'com.squareup.retrofit:retrofit:1.5.1'
     compile 'com.google.maps.android:android-maps-utils:0.2.+'
-
-
 }
 
 def getSourceSetName(variant) {

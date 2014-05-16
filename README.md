@@ -21,11 +21,15 @@ To Do
 
 
 Building the app
------------------------------
-Clone the repo with this command and import into the Android Studio. Then, sync with the gradle
+-----------------
+* Clone the repo with this command and import into the Android Studio. 
 ```bash
 git clone git@github.com:indexer/popa.git
+./gradlew clean
+./gradlew build
 ```
+* Sync with gradle and you should be able to run the app.
+* You may encounter `NullPointerException` while running the app because of Google Maps. We're aware of that and trying several workarounds to solve it.
 
 Contributing
 ------------
