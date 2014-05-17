@@ -2,13 +2,16 @@ package com.indexer.hellotaxi.app.ui;
 
 import android.app.Activity;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.RadioButton;
 import android.widget.Spinner;
 
 import com.indexer.hellotaxi.app.R;
 
 import org.androidannotations.annotations.AfterInject;
 import org.androidannotations.annotations.AfterViews;
+import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.ViewById;
 import org.androidannotations.annotations.res.StringArrayRes;
@@ -33,6 +36,18 @@ public class CallActivity extends Activity {
 
     @ViewById(R.id.carType)
     Spinner carType;
+
+
+
+    @Click(R.id.radioDriver)
+    void Show(){
+        carType.setVisibility(View.VISIBLE);
+    }
+
+    @Click(R.id.radioPassenger)
+    void Hide(){
+        carType.setVisibility(View.GONE);
+    }
 
     @AfterViews
     void addSpinner() {
