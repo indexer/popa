@@ -10,7 +10,6 @@ import com.indexer.hellotaxi.app.R;
 import org.androidannotations.annotations.AfterInject;
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.EActivity;
-import org.androidannotations.annotations.UiThread;
 import org.androidannotations.annotations.ViewById;
 import org.androidannotations.annotations.res.StringArrayRes;
 import org.androidannotations.annotations.res.StringRes;
@@ -39,7 +38,7 @@ public class CallActivity extends Activity {
     void addSpinner() {
         ArrayList<String> typeCar = new ArrayList<String>(Arrays.asList(carTypeList));
         ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this,
-                android.R.layout.simple_spinner_item, typeCar);
+                android.R.layout.simple_spinner_dropdown_item, typeCar);
         carType.setAdapter(dataAdapter);
     }
 

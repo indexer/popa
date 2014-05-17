@@ -8,6 +8,11 @@
     <string name="Find">Find</string>
     <string name="Call">Call</string>
 
+    <!--hint text -->
+    <string name="phonenumber">Phone Number</string>
+    <string name="carnumber">Car Number</string>
+    <string name="username">User Name</string>
+
     <!-- api url -->
     <string name="api_url"></string>
 

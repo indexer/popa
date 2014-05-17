@@ -8,26 +8,53 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="com.indexer.hellotaxi.app.ui.CallActivity_">
 
+
     <ImageView
         android:id="@+id/imgUser"
+        android:layout_marginTop="@dimen/circle"
         android:src="@drawable/defaultusericon"
         android:layout_width="match_parent"
         android:scaleType="fitXY"
         android:layout_height="200dp" />
 
+    <RadioGroup
+        android:id="@+id/radioType"
+        android:layout_marginTop="@dimen/circle"
+        android:layout_below="@+id/imgUser"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:text="Passenger"
+            android:layout_width="0dp"
+            android:layout_weight=".50"
+            android:layout_height="wrap_content" />
+        <RadioButton
+            android:text="Driver"
+            android:layout_width="0dp"
+            android:layout_weight=".50"
+            android:layout_height="wrap_content" />
+    </RadioGroup>
+
     <EditText
         android:id="@+id/userName"
-        android:layout_below="@id/imgUser"
+        android:layout_marginTop="@dimen/circle"
+        android:hint="@string/username"
+        android:layout_below="@id/radioType"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <EditText
         android:layout_below="@+id/userName"
         android:id="@+id/userPhone"
+        android:layout_marginTop="@dimen/circle"
+        android:inputType="number"
+        android:hint="@string/phonenumber"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
     <Spinner
         android:id="@+id/carType"
+        android:layout_marginTop="@dimen/circle"
         android:layout_below="@+id/userPhone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
