@@ -1,12 +1,17 @@
 package com.indexer.hellotaxi.app.ui;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
-import android.widget.RadioButton;
+import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Spinner;
 
+import com.indexer.hellotaxi.app.Listener.mapMarkerListener;
+import com.indexer.hellotaxi.app.Listener.newPhotoListener;
 import com.indexer.hellotaxi.app.R;
 
 import org.androidannotations.annotations.AfterInject;
@@ -37,24 +42,37 @@ public class CallActivity extends Activity {
     @ViewById(R.id.carType)
     Spinner carType;
 
+    @ViewById(R.id.txtCarNumber)
+    EditText carNumber;
+
+    @ViewById(R.id.imgUser)
+    ImageView imgUser;
 
 
     @Click(R.id.radioDriver)
-    void Show(){
+    void Show() {
         carType.setVisibility(View.VISIBLE);
+        carNumber.setVisibility(View.VISIBLE);
+
     }
 
     @Click(R.id.radioPassenger)
-    void Hide(){
+    void Hide() {
         carType.setVisibility(View.GONE);
+        carNumber.setVisibility(View.GONE);
     }
+
 
     @AfterViews
     void addSpinner() {
+
         ArrayList<String> typeCar = new ArrayList<String>(Arrays.asList(carTypeList));
         ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_spinner_dropdown_item, typeCar);
         carType.setAdapter(dataAdapter);
+        newPhotoListener newPhotoListener = new newPhotoListener(this);
+        imgUser.setOnClickListener(newPhotoListener);
+
     }
 
     @AfterInject

@@ -114,7 +114,7 @@
             android:layout_marginBottom="@dimen/liner"
             android:textColor="@android:color/white"
             android:textStyle="bold"
-            android:text="Book Now"
+            android:text="@string/BookNow"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </RelativeLayout>
