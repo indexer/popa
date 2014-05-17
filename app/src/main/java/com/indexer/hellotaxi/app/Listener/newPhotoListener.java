@@ -3,10 +3,12 @@ package com.indexer.hellotaxi.app.Listener;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.view.View;
 import android.widget.ArrayAdapter;
-
 
 /**
  * Created by yemonkyaw on 5/17/14.
@@ -32,27 +34,33 @@ public class newPhotoListener implements View.OnClickListener {
         arrayAdapter.add("Gallery");
         builderSingle.setNegativeButton("cancel",
                 new DialogInterface.OnClickListener() {
-
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         dialog.dismiss();
                     }
                 }
         );
-
+ //To Do add Photo Listener
         builderSingle.setAdapter(arrayAdapter,
                 new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        if (which == 0) {
+                        if (which == 1) {
 
-                        } else if (which == 1) {
+                        } else if (which == 2) {
                         }
-
                         dialog.dismiss();
                     }
                 }
         );
         builderSingle.show();
+    }
+
+    private void startActivityForResult(Intent intent ,int requestcode) {
+        if (requestcode == 1) {
+
+        } else if (requestcode == 2) {
+
+        }
     }
 }
