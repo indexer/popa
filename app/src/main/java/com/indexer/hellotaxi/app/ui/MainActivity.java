@@ -1,8 +1,10 @@
 package com.indexer.hellotaxi.app.ui;
 
 import android.content.Context;
+import android.content.Intent;
 import android.location.Location;
 import android.location.LocationManager;
+import android.view.MenuItem;
 import android.widget.TextView;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -82,5 +84,20 @@ public class MainActivity extends BasePopaActivity {
                 position(position).
                 anchor(iconFactory.getAnchorU(), iconFactory.getAnchorV());
         getMap().addMarker(markerOptions);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                this.onBackPressed();
+                finish();
+                return false;
+            case R.id.action_add:
+                Intent intentToCallActivity = new Intent(this, CallActivity_.class);
+                startActivity(intentToCallActivity);
+                return false;
+        }
+        return false;
     }
 }

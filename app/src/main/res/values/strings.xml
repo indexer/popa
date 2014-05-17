@@ -17,4 +17,10 @@
     <string name="findtaxi">Find Taxi</string>
     <string name="hello_blank_fragment">Hello</string>
     <string name="title_activity_call">Call The Taxi</string>
+
+    <array name="carTypeList">
+        <item>Toyota</item>
+        <item>Honda</item>
+        <item>Cherry QQ</item>
+    </array>
 </resources>
