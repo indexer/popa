@@ -9,14 +9,16 @@ import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
+
+import com.indexer.hellotaxi.app.R;
 
 /**
  * Created by yemonkyaw on 5/17/14.
  */
 public class newPhotoListener implements View.OnClickListener {
     Activity mActivity;
-    Uri mImageUri;
-    private String selectedImagePath;
+
 
     public newPhotoListener(Activity activity) {
         mActivity = activity;
@@ -45,9 +47,12 @@ public class newPhotoListener implements View.OnClickListener {
                 new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        if (which == 1) {
+                        if (which == 0) {
 
-                        } else if (which == 2) {
+                        } else if (which == 1) {
+                            Intent photoPickerIntent = new Intent(Intent.ACTION_PICK);
+                            photoPickerIntent.setType("image/*");
+                            mActivity.startActivityForResult(photoPickerIntent,1);
                         }
                         dialog.dismiss();
                     }
@@ -56,11 +61,6 @@ public class newPhotoListener implements View.OnClickListener {
         builderSingle.show();
     }
 
-    private void startActivityForResult(Intent intent ,int requestcode) {
-        if (requestcode == 1) {
 
-        } else if (requestcode == 2) {
 
-        }
-    }
 }

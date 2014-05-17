@@ -1,8 +1,11 @@
 package com.indexer.hellotaxi.app.ui;
 
 import android.app.Activity;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
+import android.os.ParcelFileDescriptor;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -10,7 +13,6 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
 
-import com.indexer.hellotaxi.app.Listener.mapMarkerListener;
 import com.indexer.hellotaxi.app.Listener.newPhotoListener;
 import com.indexer.hellotaxi.app.R;
 
@@ -18,10 +20,13 @@ import org.androidannotations.annotations.AfterInject;
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EActivity;
+import org.androidannotations.annotations.OnActivityResult;
 import org.androidannotations.annotations.ViewById;
 import org.androidannotations.annotations.res.StringArrayRes;
 import org.androidannotations.annotations.res.StringRes;
 
+import java.io.FileDescriptor;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -29,6 +34,8 @@ import javax.inject.Inject;
 
 @EActivity(R.layout.activity_call)
 public class CallActivity extends Activity {
+
+    Uri mImageUri;
 
     @Inject
     ActivityTitleController titleController;
@@ -75,6 +82,16 @@ public class CallActivity extends Activity {
 
     }
 
+    @OnActivityResult(1)
+    void onResult(Intent data){
+        mImageUri = data.getData();
+        try {
+            imgUser.setImageBitmap(getBimapFromUri(mImageUri));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     @AfterInject
     void title() {
         getActionBar().setDisplayHomeAsUpEnabled(true);
@@ -97,5 +114,17 @@ public class CallActivity extends Activity {
         }
         return false;
     }
+
+    private Bitmap getBimapFromUri(Uri mImageUri) throws IOException {
+        ParcelFileDescriptor paracelFileDescriptor = null;
+
+        paracelFileDescriptor = getContentResolver().openFileDescriptor(mImageUri, "r");
+        FileDescriptor fileDescriptor = paracelFileDescriptor.getFileDescriptor();
+        Bitmap image = BitmapFactory.decodeFileDescriptor(fileDescriptor);
+        paracelFileDescriptor.close();
+
+        return image;
+    }
+
 
 }
