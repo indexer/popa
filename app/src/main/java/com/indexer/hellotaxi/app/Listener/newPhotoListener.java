@@ -19,7 +19,6 @@ import com.indexer.hellotaxi.app.R;
 public class newPhotoListener implements View.OnClickListener {
     Activity mActivity;
 
-
     public newPhotoListener(Activity activity) {
         mActivity = activity;
 
@@ -48,6 +47,8 @@ public class newPhotoListener implements View.OnClickListener {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         if (which == 0) {
+                            Intent cameraIntent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
+                            mActivity.startActivityForResult(cameraIntent, 0);
 
                         } else if (which == 1) {
                             Intent photoPickerIntent = new Intent(Intent.ACTION_PICK);

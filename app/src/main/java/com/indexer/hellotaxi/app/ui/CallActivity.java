@@ -82,6 +82,12 @@ public class CallActivity extends Activity {
 
     }
 
+    @OnActivityResult(0)
+    void onCamera(Intent camera){
+        Bitmap bp = (Bitmap) camera.getExtras().get("data");
+            imgUser.setImageBitmap(bp);
+        }
+
     @OnActivityResult(1)
     void onResult(Intent data){
         mImageUri = data.getData();
