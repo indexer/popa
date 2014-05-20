@@ -4,7 +4,7 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <!-- -button -->
-    <string name="Signup">Sing Up</string>
+    <string name="Signup">Sign Up</string>
     <string name="Find">Find</string>
     <string name="Call">Call</string>
     <string name="Register">Register</string>
