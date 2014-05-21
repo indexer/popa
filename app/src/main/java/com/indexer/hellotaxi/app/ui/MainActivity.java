@@ -2,6 +2,7 @@ package com.indexer.hellotaxi.app.ui;
 
 import android.content.Context;
 import android.content.Intent;
+import android.location.Criteria;
 import android.location.Location;
 import android.location.LocationManager;
 import android.view.MenuItem;
@@ -59,7 +60,19 @@ public class MainActivity extends BasePopaActivity {
     @UiThread
     protected void start() {
         locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
-        locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0,
+
+        //All your normal criteria setup
+        Criteria criteria = new Criteria();
+        //Use FINE or COARSE (or NO_REQUIREMENT) here
+        criteria.setAccuracy(Criteria.ACCURACY_FINE);
+        criteria.setPowerRequirement(Criteria.POWER_LOW);
+        criteria.setAltitudeRequired(true);
+        criteria.setSpeedRequired(true);
+        criteria.setCostAllowed(true);
+        criteria.setBearingRequired(true);
+        // let Android select the right location provider for you
+        String myProvider = locationManager.getBestProvider(criteria, true);
+        locationManager.requestLocationUpdates(myProvider, 0, 0,
                 mlocationListener);
         mapMarkerListener mapMarkerListener = new mapMarkerListener(this);
         IconGenerator iconFactory = new IconGenerator(this);
