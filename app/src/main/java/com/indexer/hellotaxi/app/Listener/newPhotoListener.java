@@ -4,18 +4,9 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.net.Uri;
 import android.view.View;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
 
-import com.indexer.hellotaxi.app.R;
-
-/**
- * Created by yemonkyaw on 5/17/14.
- */
 public class newPhotoListener implements View.OnClickListener {
     Activity mActivity;
 
@@ -41,7 +32,7 @@ public class newPhotoListener implements View.OnClickListener {
                     }
                 }
         );
- //To Do add Photo Listener
+        //To Do add Photo Listener
         builderSingle.setAdapter(arrayAdapter,
                 new DialogInterface.OnClickListener() {
                     @Override
@@ -53,7 +44,7 @@ public class newPhotoListener implements View.OnClickListener {
                         } else if (which == 1) {
                             Intent photoPickerIntent = new Intent(Intent.ACTION_PICK);
                             photoPickerIntent.setType("image/*");
-                            mActivity.startActivityForResult(photoPickerIntent,1);
+                            mActivity.startActivityForResult(photoPickerIntent, 1);
                         }
                         dialog.dismiss();
                     }
@@ -61,7 +52,6 @@ public class newPhotoListener implements View.OnClickListener {
         );
         builderSingle.show();
     }
-
 
 
 }

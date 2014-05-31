@@ -18,13 +18,12 @@ import com.indexer.hellotaxi.app.Listener.mapMarkerListener;
 import com.indexer.hellotaxi.app.Listener.mlocationListener;
 import com.indexer.hellotaxi.app.R;
 
-import org.androidannotations.annotations.AfterInject;
+import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.OptionsMenu;
 import org.androidannotations.annotations.UiThread;
 import org.androidannotations.annotations.ViewById;
-import org.androidannotations.annotations.res.StringRes;
 
 import javax.inject.Inject;
 
@@ -35,8 +34,6 @@ public class MainActivity extends BasePopaActivity {
     LocationManager locationManager;
     mlocationListener mlocationListener = new mlocationListener();
 
-    @StringRes(R.string.findtaxi)
-    String findTaxi;
 
     @ViewById(R.id.taxiDriverName)
     TextView txtDriverName;
@@ -51,9 +48,9 @@ public class MainActivity extends BasePopaActivity {
         }
     }
 
-    @AfterInject
+    @AfterViews
     void title() {
-        getActionBar().setTitle(findTaxi);
+        getSupportActionBar().setTitle(getResources().getString(R.string.title_activity_call));
     }
 
     @Override
@@ -91,6 +88,7 @@ public class MainActivity extends BasePopaActivity {
 
     }
 
+    //to show Maker with Customize cluster item theme
     private void addIcon(IconGenerator iconFactory, String text, LatLng position) {
         MarkerOptions markerOptions = new MarkerOptions().
                 icon(BitmapDescriptorFactory.fromBitmap(iconFactory.makeIcon(text))).
@@ -107,9 +105,16 @@ public class MainActivity extends BasePopaActivity {
                 finish();
                 return false;
             case R.id.action_add:
+                //thi will going to the Register
                 Intent intentToCallActivity = new Intent(this, CallActivity_.class);
                 startActivity(intentToCallActivity);
                 return false;
+            case R.id.action_settings:
+                //this will going to the SettingActiivty
+                Intent intentToSettingActivity = new Intent(this, SettingActivity_.class);
+                startActivity(intentToSettingActivity);
+                return false;
+
         }
         return false;
     }

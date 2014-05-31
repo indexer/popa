@@ -7,7 +7,7 @@
         android:showAsAction="ifRoom|withText" />
 
     <item android:id="@+id/action_settings"
-        android:title="@string/nearby"
+        android:title="@string/Setting"
         android:showAsAction="ifRoom|withText" />
 
 </menu>

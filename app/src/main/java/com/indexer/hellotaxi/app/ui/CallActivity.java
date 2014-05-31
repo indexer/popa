@@ -1,11 +1,11 @@
 package com.indexer.hellotaxi.app.ui;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.ParcelFileDescriptor;
+import android.support.v7.app.ActionBarActivity;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -33,7 +33,7 @@ import java.util.Arrays;
 import javax.inject.Inject;
 
 @EActivity(R.layout.activity_call)
-public class CallActivity extends Activity {
+public class CallActivity extends ActionBarActivity {
 
     Uri mImageUri;
 
@@ -83,13 +83,13 @@ public class CallActivity extends Activity {
     }
 
     @OnActivityResult(0)
-    void onCamera(Intent camera){
+    void onCamera(Intent camera) {
         Bitmap bp = (Bitmap) camera.getExtras().get("data");
-            imgUser.setImageBitmap(bp);
-        }
+        imgUser.setImageBitmap(bp);
+    }
 
     @OnActivityResult(1)
-    void onResult(Intent data){
+    void onResult(Intent data) {
         mImageUri = data.getData();
         try {
             imgUser.setImageBitmap(getBimapFromUri(mImageUri));
@@ -98,11 +98,6 @@ public class CallActivity extends Activity {
         }
     }
 
-    @AfterInject
-    void title() {
-        getActionBar().setDisplayHomeAsUpEnabled(true);
-        getActionBar().setTitle(title);
-    }
 
 
     @Override
@@ -122,7 +117,7 @@ public class CallActivity extends Activity {
     }
 
     private Bitmap getBimapFromUri(Uri mImageUri) throws IOException {
-        ParcelFileDescriptor paracelFileDescriptor = null;
+        ParcelFileDescriptor paracelFileDescriptor;
 
         paracelFileDescriptor = getContentResolver().openFileDescriptor(mImageUri, "r");
         FileDescriptor fileDescriptor = paracelFileDescriptor.getFileDescriptor();

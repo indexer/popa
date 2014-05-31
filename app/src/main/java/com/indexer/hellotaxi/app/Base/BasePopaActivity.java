@@ -2,6 +2,7 @@ package com.indexer.hellotaxi.app.Base;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
+import android.support.v7.app.ActionBarActivity;
 
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.SupportMapFragment;
@@ -14,7 +15,7 @@ import java.util.List;
 
 import dagger.ObjectGraph;
 
-public abstract class BasePopaActivity extends FragmentActivity {
+public abstract class BasePopaActivity extends ActionBarActivity {
     private ObjectGraph activityGraph;
     private GoogleMap mMap;
 

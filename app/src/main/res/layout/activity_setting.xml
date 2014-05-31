@@ -1,0 +1,38 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".ui.SettingActivity">
+
+    <TextView
+        android:id="@+id/headerLanguage"
+        android:textStyle="bold"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/Language"
+        android:layout_marginBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_below="@+id/headerLanguage"
+        android:layout_height="5px"
+        android:layout_width="match_parent"
+        android:background="?android:attr/listDivider" />
+
+    <TextView
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/view"
+        android:id="@+id/selectedLanguage"
+        android:text="Myanmar"
+        android:textColor="?android:attr/textColorSecondary"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+</RelativeLayout>
