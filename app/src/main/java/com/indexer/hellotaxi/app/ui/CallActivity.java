@@ -16,7 +16,6 @@ import android.widget.Spinner;
 import com.indexer.hellotaxi.app.Listener.newPhotoListener;
 import com.indexer.hellotaxi.app.R;
 
-import org.androidannotations.annotations.AfterInject;
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EActivity;
@@ -69,7 +68,6 @@ public class CallActivity extends ActionBarActivity {
         carNumber.setVisibility(View.GONE);
     }
 
-
     @AfterViews
     void addSpinner() {
 
@@ -99,7 +97,6 @@ public class CallActivity extends ActionBarActivity {
     }
 
 
-
     @Override
     public void onResume() {
         super.onResume();
@@ -118,12 +115,10 @@ public class CallActivity extends ActionBarActivity {
 
     private Bitmap getBimapFromUri(Uri mImageUri) throws IOException {
         ParcelFileDescriptor paracelFileDescriptor;
-
         paracelFileDescriptor = getContentResolver().openFileDescriptor(mImageUri, "r");
         FileDescriptor fileDescriptor = paracelFileDescriptor.getFileDescriptor();
         Bitmap image = BitmapFactory.decodeFileDescriptor(fileDescriptor);
         paracelFileDescriptor.close();
-
         return image;
     }
 

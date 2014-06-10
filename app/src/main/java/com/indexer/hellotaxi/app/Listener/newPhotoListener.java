@@ -12,12 +12,10 @@ public class newPhotoListener implements View.OnClickListener {
 
     public newPhotoListener(Activity activity) {
         mActivity = activity;
-
     }
 
     @Override
     public void onClick(View v) {
-
         AlertDialog.Builder builderSingle = new AlertDialog.Builder(mActivity);
         builderSingle.setIcon(android.R.drawable.ic_menu_camera);
         builderSingle.setTitle("Select Source");

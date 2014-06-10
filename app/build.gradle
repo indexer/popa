@@ -3,7 +3,7 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:0.10.+'
+        classpath 'com.android.tools.build:gradle:0.11.+'
     }
 }
 
@@ -11,7 +11,7 @@ apply plugin: 'android'
 
 android {
     compileSdkVersion 19
-    buildToolsVersion '19.0.3'
+    buildToolsVersion '19.1.0'
 
     defaultConfig {
         minSdkVersion 15
@@ -27,7 +27,7 @@ android {
             debuggable false
             jniDebugBuild false
             zipAlign true
-            packageNameSuffix '.release'
+            applicationIdSuffix '.release'
             versionNameSuffix '-RELEASE'
         }
 
@@ -36,7 +36,7 @@ android {
             jniDebugBuild true
             runProguard false
             zipAlign true
-            packageNameSuffix '.debug'
+            applicationIdSuffix '.debug'
             versionNameSuffix '-DEBUG'
         }
 
@@ -45,7 +45,7 @@ android {
             jniDebugBuild true
             runProguard false
             zipAlign true
-            packageNameSuffix '.beta'
+            applicationIdSuffix '.beta'
             versionNameSuffix '-BETA'
         }
 
@@ -85,8 +85,10 @@ dependencies {
 }
 
 android.applicationVariants.all { variant ->
-    def aptOutputDir = project.file("${project.buildDir}/source/apt_generated")
-    aptOutput = file("${project.buildDir}/source/apt_generated/${variant.dirName}")
+/*  def aptOutputDir = project.file("${project.buildDir}/source/apt_generated")*/
+    def aptOutputDir = project.file("build/generated/source/apt/${variant.dirName}")
+/*    aptOutput = file("${project.buildDir}/source/apt/${variant.dirName}")*/
+    aptOutput = project.file("build/generated/source/apt/${variant.dirName}")
     println "****************************"
     println "variant: ${variant.name}"
     println "manifest:  ${variant.processResources.manifestFile}"
