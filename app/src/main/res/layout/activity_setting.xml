@@ -34,5 +34,36 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/selectedLanguage"
+        android:id="@+id/headerSelect"
+        android:textStyle="bold"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Search By"
+        android:layout_marginBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:id="@+id/header"
+        android:layout_below="@+id/headerSelect"
+        android:layout_height="5px"
+        android:layout_width="match_parent"
+        android:background="?android:attr/listDivider" />
+
+    <CheckBox
+        android:text="Near By"
+        android:id="@+id/chknearby"
+        android:layout_below="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <CheckBox
+        android:text="All Taxi"
+        android:layout_below="@+id/chknearby"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
 
 </RelativeLayout>
