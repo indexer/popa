@@ -85,17 +85,21 @@ public class CallActivity extends ActionBarActivity {
 
     @OnActivityResult(0)
     void onCamera(Intent camera) {
-        Bitmap bp = (Bitmap) camera.getExtras().get("data");
-        imgUser.setImageBitmap(bp);
+        if(camera !=null) {
+            Bitmap bp = (Bitmap) camera.getExtras().get("data");
+            imgUser.setImageBitmap(bp);
+        }
     }
 
     @OnActivityResult(1)
     void onResult(Intent data) {
-        mImageUri = data.getData();
-        try {
-            imgUser.setImageBitmap(getBimapFromUri(mImageUri));
-        } catch (IOException e) {
-            e.printStackTrace();
+        if(data != null) {
+            mImageUri = data.getData();
+            try {
+                imgUser.setImageBitmap(getBimapFromUri(mImageUri));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 
