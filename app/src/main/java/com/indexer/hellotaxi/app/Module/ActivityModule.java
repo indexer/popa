@@ -16,16 +16,14 @@
 package com.indexer.hellotaxi.app.Module;
 
 import android.content.Context;
-
 import com.indexer.hellotaxi.app.Base.BasePopaActivity;
 import com.indexer.hellotaxi.app.ForActivity;
-import com.indexer.hellotaxi.app.ui.ActivityTitleController;
+import com.indexer.hellotaxi.app.Ui.ActivityTitleController;
+import com.indexer.hellotaxi.app.ui.CallActivity_;
 import com.indexer.hellotaxi.app.ui.MainActivity_;
-
-import javax.inject.Singleton;
-
 import dagger.Module;
 import dagger.Provides;
+import javax.inject.Singleton;
 
 /**
  * This module represents objects which exist only for the scope of a single activity. We can
@@ -33,35 +31,24 @@ import dagger.Provides;
  * ever exist inside of that activity.
  */
 @Module(
-        injects = {
-                MainActivity_.class,
-        },
-        addsTo = AndroidModule.class,
-        library = true
+    injects = {
+        MainActivity_.class, CallActivity_.class
+    },
+    addsTo = AndroidModule.class,
+    library = true
 )
 public class ActivityModule {
-    private final BasePopaActivity activity;
+  private final BasePopaActivity activity;
 
-    public ActivityModule(BasePopaActivity activity) {
-        this.activity = activity;
-    }
+  public ActivityModule(BasePopaActivity activity) {
+    this.activity = activity;
+  }
 
+  @Provides @Singleton @ForActivity Context provideActivityContext() {
+    return activity;
+  }
 
-    @Provides
-    @Singleton
-    @ForActivity
-    Context provideActivityContext() {
-        return activity;
-    }
-
-
-
-    @Provides
-    @Singleton
-    ActivityTitleController
-    provideTitleController() {
-        return new ActivityTitleController(activity);
-    }
-
-
+  @Provides @Singleton ActivityTitleController provideTitleController() {
+    return new ActivityTitleController(activity);
+  }
 }

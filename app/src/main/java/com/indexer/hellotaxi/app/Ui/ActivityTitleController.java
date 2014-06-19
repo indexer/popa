@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.indexer.hellotaxi.app.ui;
+package com.indexer.hellotaxi.app.Ui;
 
 import android.app.Activity;
 

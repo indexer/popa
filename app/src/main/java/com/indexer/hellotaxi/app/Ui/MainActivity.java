@@ -1,4 +1,4 @@
-package com.indexer.hellotaxi.app.ui;
+package com.indexer.hellotaxi.app.Ui;
 
 import android.content.Context;
 import android.content.Intent;
@@ -18,6 +18,8 @@ import com.indexer.hellotaxi.app.Listener.mapMarkerListener;
 import com.indexer.hellotaxi.app.Listener.mlocationListener;
 import com.indexer.hellotaxi.app.R;
 
+import com.indexer.hellotaxi.app.ui.CallActivity_;
+import com.indexer.hellotaxi.app.ui.SettingActivity_;
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EActivity;
