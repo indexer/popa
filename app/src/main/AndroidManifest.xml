@@ -37,7 +37,7 @@
             android:value="@string/googlemap" />
 
         <activity
-            android:name=".ui.MainActivity_"
+            android:name=".Ui.MainActivity_"
             android:label="@string/app_name"
             android:uiOptions="splitActionBarWhenNarrow">
             <intent-filter>
@@ -46,9 +46,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.CallActivity_" />
+        <activity android:name=".Ui.CallActivity_" />
         <activity
-            android:name=".ui.SettingActivity_"
+            android:name=".Ui.SettingActivity_"
             android:label="@string/title_activity_setting"></activity>
     </application>
 
