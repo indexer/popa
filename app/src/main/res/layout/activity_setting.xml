@@ -20,7 +20,7 @@
     <View
         android:id="@+id/view"
         android:layout_below="@+id/headerLanguage"
-        android:layout_height="5px"
+        android:layout_height="3dp"
         android:layout_width="match_parent"
         android:background="?android:attr/listDivider" />
 
@@ -28,7 +28,7 @@
         android:layout_marginTop="5dp"
         android:layout_below="@+id/view"
         android:id="@+id/selectedLanguage"
-        android:text="Myanmar"
+        android:text="@string/languageMyanmar"
         android:textColor="?android:attr/textColorSecondary"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_width="match_parent"
@@ -40,7 +40,7 @@
         android:id="@+id/headerSelect"
         android:textStyle="bold"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Search By"
+        android:text="@string/searchBy"
         android:layout_marginBottom="5dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
@@ -48,19 +48,19 @@
     <View
         android:id="@+id/header"
         android:layout_below="@+id/headerSelect"
-        android:layout_height="5px"
+        android:layout_height="3dp"
         android:layout_width="match_parent"
         android:background="?android:attr/listDivider" />
 
     <CheckBox
-        android:text="Near By"
+        android:text="@string/nearby"
         android:id="@+id/chknearby"
         android:layout_below="@+id/header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <CheckBox
-        android:text="All Taxi"
+        android:text="@string/taxi_all"
         android:layout_below="@+id/chknearby"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />

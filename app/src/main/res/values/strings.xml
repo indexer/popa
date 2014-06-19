@@ -1,38 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Popa</string>
-    <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
-    <!-- -button -->
-    <string name="Signup">Sign Up</string>
-    <string name="Find">Find</string>
-    <string name="Call">Call</string>
-    <string name="Register">Register</string>
-    <string name="BookNow">Book Now</string>
-    <string name="Setting">Setting</string>
-    <string name="Language">Launguage</string>
+  <string name="app_name">Popa</string>
+  <string name="hello_world">Hello world!</string>
+  <string name="action_settings">Settings</string>
+  <!-- -button -->
+  <string name="Signup">Sign Up</string>
+  <string name="Find">Find</string>
+  <string name="Call">Call</string>
+  <string name="Register">Register</string>
+  <string name="BookNow">Book Now</string>
+  <string name="Setting">Setting</string>
+  <string name="Language">Launguage</string>
 
-    <!-- hint text -->
-    <string name="phonenumber">Phone Number</string>
-    <string name="carnumber">Car Number</string>
-    <string name="username">User Name</string>
+  <!-- hint text -->
+  <string name="phonenumber">Phone Number</string>
+  <string name="carnumber">Car Number</string>
+  <string name="username">User Name</string>
 
-    <!-- api url -->
-    <string name="api_url"></string>
-    <string name="title_activity_base_popa">BasePopaActivity</string>
-    <!-- map Title -->
-    <string name="nearby">Near By Taxi :</string>
-    <string name="findtaxi">Find Taxi</string>
-    <string name="hello_blank_fragment">Hello</string>
-    <string name="title_activity_call">Call The Taxi</string>
+  <!-- api url -->
+  <string name="api_url"></string>
+  <string name="title_activity_base_popa">BasePopaActivity</string>
+  <!-- map Title -->
+  <string name="nearby">Near By Taxi</string>
+  <string name="findtaxi">Find Taxi</string>
+  <string name="hello_blank_fragment">Hello</string>
+  <string name="title_activity_call">Call The Taxi</string>
+  <string name="taxi_all">All Taxi</string>
+  <array name="carTypeList">
+    <item>Toyota</item>
+    <item>Honda</item>
+    <item>Cherry QQ</item>
+  </array>
+  <string name="languageMyanmar">Myanmar</string>
+  <string name="searchBy">Search By</string>
 
-    <array name="carTypeList">
-        <item>Toyota</item>
-        <item>Honda</item>
-        <item>Cherry QQ</item>
-    </array>
-
-    <string name="title_activity_setting">Setting</string>
+  <string name="title_activity_setting">Setting</string>
 
 </resources>

@@ -31,6 +31,7 @@ public class MainActivity extends BasePopaActivity {
 
   @ViewById(R.id.taxiDriverName) TextView txtDriverName;
 
+  //ToDo map move care to the taxi location
   @Click(R.id.innerlayout) void changeCard() {
     if (txtDriverName.getText().equals("Swan Htet Aung")) {
       txtDriverName.setText("Arar Aung");
@@ -46,13 +47,12 @@ public class MainActivity extends BasePopaActivity {
   @Override @UiThread
   protected void start() {
     locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
-
     //All your normal criteria setup
     Criteria criteria = new Criteria();
     //Use FINE or COARSE (or NO_REQUIREMENT) here
     criteria.setAccuracy(Criteria.ACCURACY_FINE);
     criteria.setPowerRequirement(Criteria.POWER_LOW);
-   criteria.setAltitudeRequired(true);
+    criteria.setAltitudeRequired(true);
     criteria.setSpeedRequired(true);
     criteria.setCostAllowed(true);
     criteria.setBearingRequired(true);
@@ -67,11 +67,13 @@ public class MainActivity extends BasePopaActivity {
       getMap().moveCamera(CameraUpdateFactory.newLatLngZoom(
           new LatLng(location.getLatitude(), location.getLongitude()), 19));
       iconFactory.setStyle(IconGenerator.STYLE_GREEN);
-        addIcon(iconFactory, "3/W", new LatLng(location.getLatitude(), location.getLongitude()));
-        addIcon(iconFactory, "9/C", new LatLng(location.getLatitude() + 0.00002, location.getLongitude() + 0.0005));
+      addIcon(iconFactory, "3/W", new LatLng(location.getLatitude(), location.getLongitude()));
+      addIcon(iconFactory, "9/C",
+          new LatLng(location.getLatitude() + 0.00002, location.getLongitude() + 0.0005));
       getMap().setOnMarkerClickListener(mapMarkerListener);
     } else {
-
+      //ToDo request user location and find near by taxi here
+      getMap().moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(16, 96), 19));
     }
   }
 
