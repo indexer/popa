@@ -8,62 +8,69 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context=".ui.SettingActivity">
 
-    <TextView
-        android:id="@+id/headerLanguage"
-        android:textStyle="bold"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="@string/Language"
-        android:layout_marginBottom="5dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+  <TextView
+      android:id="@+id/headerLanguage"
+      android:textStyle="bold"
+      android:textAppearance="?android:attr/textAppearanceMedium"
+      android:text="@string/Language"
+      android:layout_marginBottom="5dp"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"/>
 
-    <View
-        android:id="@+id/view"
-        android:layout_below="@+id/headerLanguage"
-        android:layout_height="3dp"
-        android:layout_width="match_parent"
-        android:background="?android:attr/listDivider" />
+  <View
+      android:id="@+id/view"
+      android:layout_below="@+id/headerLanguage"
+      android:layout_height="3dp"
+      android:layout_width="match_parent"
+      android:background="?android:attr/listDivider"/>
 
-    <TextView
-        android:layout_marginTop="5dp"
-        android:layout_below="@+id/view"
-        android:id="@+id/selectedLanguage"
-        android:text="@string/languageMyanmar"
-        android:textColor="?android:attr/textColorSecondary"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+  <TextView
+      android:layout_marginTop="5dp"
+      android:layout_below="@+id/view"
+      android:id="@+id/selectedLanguage"
+      android:text="@string/languageMyanmar"
+      android:textColor="?android:attr/textColorSecondary"
+      android:textAppearance="?android:attr/textAppearanceMedium"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"/>
 
-    <TextView
-        android:layout_marginTop="10dp"
-        android:layout_below="@+id/selectedLanguage"
-        android:id="@+id/headerSelect"
-        android:textStyle="bold"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="@string/searchBy"
-        android:layout_marginBottom="5dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+  <TextView
+      android:layout_marginTop="20dp"
+      android:layout_below="@+id/selectedLanguage"
+      android:id="@+id/headerSelect"
+      android:textStyle="bold"
+      android:textAppearance="?android:attr/textAppearanceMedium"
+      android:text="@string/searchBy"
+      android:layout_marginBottom="5dp"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"/>
 
-    <View
-        android:id="@+id/header"
-        android:layout_below="@+id/headerSelect"
-        android:layout_height="3dp"
-        android:layout_width="match_parent"
-        android:background="?android:attr/listDivider" />
+  <View
+      android:id="@+id/header"
+      android:layout_below="@+id/headerSelect"
+      android:layout_height="3dp"
+      android:layout_width="match_parent"
+      android:background="?android:attr/listDivider"/>
 
-    <CheckBox
-        android:text="@string/nearby"
-        android:id="@+id/chknearby"
-        android:layout_below="@+id/header"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+  <CheckBox
+      android:text="@string/nearby"
+      android:id="@+id/chknearby"
+      android:layout_below="@+id/header"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"/>
 
-    <CheckBox
-        android:text="@string/taxi_all"
-        android:layout_below="@+id/chknearby"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+  <CheckBox
+      android:id="@+id/chkalltaxi"
+      android:text="@string/taxi_all"
+      android:layout_below="@+id/chknearby"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"/>
+
+  <CheckBox
+      android:text="@string/company_taxi"
+      android:layout_width="match_parent"
+      android:layout_below="@+id/chkalltaxi"
+      android:layout_height="wrap_content"/>
 
 
 </RelativeLayout>

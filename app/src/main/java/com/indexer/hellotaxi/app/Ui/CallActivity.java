@@ -51,7 +51,7 @@ public class CallActivity extends ActionBarActivity {
     carNumber.setVisibility(View.GONE);
   }
 
-  @AfterViews void addSpinner() {
+  @AfterViews void showUI() {
     ActionBar actionBar = getSupportActionBar();
     actionBar.setHomeButtonEnabled(true);
     actionBar.setDisplayHomeAsUpEnabled(true);
