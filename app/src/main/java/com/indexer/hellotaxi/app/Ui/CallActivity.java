@@ -41,12 +41,12 @@ public class CallActivity extends ActionBarActivity {
   @ViewById(R.id.imgUser) ImageView imgUser;
   @ViewById(R.id.radioPassenger) RadioButton radioPassenger;
 
-  @Click(R.id.radioDriver) void Show() {
+  @Click(R.id.radioDriver) void showRadio() {
     carType.setVisibility(View.VISIBLE);
     carNumber.setVisibility(View.VISIBLE);
   }
 
-  @Click(R.id.radioPassenger) void Hide() {
+  @Click(R.id.radioPassenger) void hideRadio() {
     carType.setVisibility(View.GONE);
     carNumber.setVisibility(View.GONE);
   }

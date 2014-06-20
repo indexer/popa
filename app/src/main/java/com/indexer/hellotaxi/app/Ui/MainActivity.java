@@ -1,10 +1,10 @@
 package com.indexer.hellotaxi.app.Ui;
 
-import android.content.Context;
 import android.content.Intent;
 import android.location.Criteria;
 import android.location.Location;
 import android.location.LocationManager;
+import android.net.ConnectivityManager;
 import android.view.MenuItem;
 import android.widget.TextView;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -28,6 +28,7 @@ import org.androidannotations.annotations.ViewById;
 public class MainActivity extends BasePopaActivity {
   @Inject LocationManager locationManager;
   @Inject Criteria mCriteria;
+  @Inject ConnectivityManager connectivityManager;
   mlocationListener mlocationListener = new mlocationListener();
 
   @ViewById(R.id.taxiDriverName) TextView txtDriverName;
@@ -47,9 +48,7 @@ public class MainActivity extends BasePopaActivity {
 
   @Override @UiThread
   protected void start() {
-    locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
     //All your normal criteria setup
-
     // let Android select the right location provider for you
     String myProvider = locationManager.getBestProvider(mCriteria, true);
     locationManager.requestLocationUpdates(myProvider, 0, 0, mlocationListener);
