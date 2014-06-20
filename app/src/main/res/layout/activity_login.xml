@@ -14,7 +14,7 @@
   <TextView
       android:id="@+id/userPhoneView"
       android:layout_width="match_parent"
-      android:text="Enter Phone Number"
+      android:text="@string/enterphonenumber"
       android:layout_marginBottom="5dp"
       android:textAppearance="?android:attr/textAppearanceMedium"
       android:layout_height="wrap_content"/>
@@ -46,6 +46,24 @@
       android:text="@string/rememberlogin"
       android:layout_below="@+id/btnLogin"
       android:layout_width="match_parent"
+      android:layout_height="wrap_content"/>
+
+  <View
+      android:layout_marginTop="5dp"
+      android:id="@+id/header"
+      android:layout_below="@+id/rememberLogin"
+      android:layout_height="3dp"
+      android:layout_width="match_parent"
+      android:layout_marginBottom="5dp"
+      android:background="?android:attr/listDivider"/>
+  <TextView
+      android:layout_below="@+id/header"
+      android:textStyle="bold|italic"
+      android:textColor="#5FAB5D"
+      android:layout_width="match_parent"
+      android:text="@string/register"
+      android:textAppearance="?android:attr/textAppearanceSearchResultTitle"
+      android:gravity="center"
       android:layout_height="wrap_content"/>
 
 

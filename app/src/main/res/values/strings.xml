@@ -31,6 +31,8 @@
     <string name="taxi_all">All Taxi</string>
     <string name="company_taxi">Company Taxi</string>
     <string name="login">Login</string>
+    <string name="enterphonenumber">Enter Phone Number</string>
+    <string name="register">REGISTER ?</string>
 
     <array name="carTypeList">
         <item>Toyota</item>

@@ -64,12 +64,10 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" exported="" name="android-maps-utils-0.2.1" level="project" />
     <orderEntry type="library" exported="" name="play-services-4.4.52" level="project" />
-    <orderEntry type="library" exported="" name="gson-2.2.4" level="project" />
     <orderEntry type="library" exported="" name="appcompat-v7-19.1.0" level="project" />
     <orderEntry type="library" exported="" name="support-v4-19.1.0" level="project" />
     <orderEntry type="library" exported="" name="javax.inject-1" level="project" />
     <orderEntry type="library" exported="" name="dagger-1.0.0" level="project" />
-    <orderEntry type="library" exported="" name="retrofit-1.5.1" level="project" />
     <orderEntry type="library" exported="" name="androidannotations-api-3.0" level="project" />
   </component>
 </module>
