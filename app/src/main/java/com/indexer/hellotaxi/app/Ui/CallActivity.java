@@ -34,7 +34,7 @@ public class CallActivity extends ActionBarActivity {
   Uri mImageUri;
 
   @Inject ActivityTitleController titleController;
-  @StringRes(R.string.Signup) String title;
+  @StringRes(R.string.Register) String title;
   @StringArrayRes(R.array.carTypeList) String[] carTypeList;
   @ViewById(R.id.carType) Spinner carType;
   @ViewById(R.id.txtCarNumber) EditText carNumber;

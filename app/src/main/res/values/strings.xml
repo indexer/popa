@@ -41,6 +41,6 @@
     <string name="languageMyanmar">Myanmar</string>
     <string name="searchBy">Search By</string>
     <string name="title_activity_setting">Setting</string>
-    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_login">Login</string>
 
 </resources>

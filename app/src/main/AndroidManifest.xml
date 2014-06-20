@@ -45,7 +45,8 @@
         <category android:name="android.intent.category.LAUNCHER"/>
       </intent-filter>
     </activity>
-    <activity android:name=".Ui.CallActivity_"/>
+    <activity android:name=".Ui.CallActivity_"
+        android:label="@string/Register"/>
     <activity
         android:name=".Ui.SettingActivity_"
         android:label="@string/title_activity_setting"/>
