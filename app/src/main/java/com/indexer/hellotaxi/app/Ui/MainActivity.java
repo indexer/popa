@@ -102,6 +102,10 @@ public class MainActivity extends BasePopaActivity {
         Intent intentToSettingActivity = new Intent(this, SettingActivity_.class);
         startActivity(intentToSettingActivity);
         return false;
+      case R.id.action_login:
+        Intent intentToLoginActivity = new Intent(this, LoginActivity_.class);
+        startActivity(intentToLoginActivity);
+        return false;
     }
     return false;
   }

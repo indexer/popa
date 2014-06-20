@@ -1,118 +1,122 @@
 buildscript {
-    repositories {
-        mavenCentral()
-    }
-    dependencies {
-        classpath 'com.android.tools.build:gradle:0.11.+'
-    }
+  repositories {
+    mavenCentral()
+  }
+  dependencies {
+    classpath 'com.android.tools.build:gradle:0.11.+'
+  }
 }
 
 apply plugin: 'android'
 
 android {
-    compileSdkVersion 19
-    buildToolsVersion '19.1.0'
+  compileSdkVersion 19
+  buildToolsVersion '19.1.0'
 
-    defaultConfig {
-        minSdkVersion 15
-        targetSdkVersion 19
-        versionCode 1
-        versionName "1.0"
+  defaultConfig {
+    minSdkVersion 15
+    targetSdkVersion 19
+    versionCode 1
+    versionName "1.0"
+  }
+
+  buildTypes {
+
+    release {
+      runProguard false
+      debuggable false
+      jniDebugBuild false
+      zipAlign true
+      applicationIdSuffix '.release'
+      versionNameSuffix '-RELEASE'
     }
 
-    buildTypes {
-
-        release {
-            runProguard false
-            debuggable false
-            jniDebugBuild false
-            zipAlign true
-            applicationIdSuffix '.release'
-            versionNameSuffix '-RELEASE'
-        }
-
-        debug {
-            debuggable true
-            jniDebugBuild true
-            runProguard false
-            zipAlign true
-            applicationIdSuffix '.debug'
-            versionNameSuffix '-DEBUG'
-        }
-
-        beta {
-            debuggable true
-            jniDebugBuild true
-            runProguard false
-            zipAlign true
-            applicationIdSuffix '.beta'
-            versionNameSuffix '-BETA'
-        }
-
+    debug {
+      debuggable true
+      jniDebugBuild true
+      runProguard false
+      zipAlign true
+      applicationIdSuffix '.debug'
+      versionNameSuffix '-DEBUG'
     }
 
-    productFlavors {}
-
-    lintOptions {
-        abortOnError false
+    beta {
+      debuggable true
+      jniDebugBuild true
+      runProguard false
+      zipAlign true
+      applicationIdSuffix '.beta'
+      versionNameSuffix '-BETA'
     }
+  }
+
+  productFlavors {}
+
+  lintOptions {
+    abortOnError false
+  }
 }
 
 dependencies {
-    compile 'com.google.android.gms:play-services:3.2.+'
-    compile 'com.android.support:support-v4:19.+'
-    compile 'com.android.support:appcompat-v7:19.+'
-    compile 'com.squareup.retrofit:retrofit:1.5.1'
-    compile 'com.google.maps.android:android-maps-utils:0.2.+'
+  compile 'com.google.android.gms:play-services:+'
+  compile 'com.android.support:support-v4:19.+'
+  compile 'com.android.support:appcompat-v7:19.+'
+  compile 'com.squareup.retrofit:retrofit:1.5.1'
+  compile 'com.google.maps.android:android-maps-utils:0.2.+'
 }
 
 def getSourceSetName(variant) {
-    return new File(variant.dirName).getName();
+  return new File(variant.dirName).getName();
 }
 
 ext.daggerVersion = '1.0.0';
 ext.androidAnnotationsVersion = '3.0';
 
 configurations {
-    apt
+  apt
 }
 
 dependencies {
-    apt "org.androidannotations:androidannotations:${androidAnnotationsVersion}"
-    compile "org.androidannotations:androidannotations-api:${androidAnnotationsVersion}"
-    apt "com.squareup.dagger:dagger-compiler:${daggerVersion}"
-    compile "com.squareup.dagger:dagger:${daggerVersion}"
+  apt "org.androidannotations:androidannotations:${androidAnnotationsVersion}"
+  compile "org.androidannotations:androidannotations-api:${androidAnnotationsVersion}"
+  apt "com.squareup.dagger:dagger-compiler:${daggerVersion}"
+  compile "com.squareup.dagger:dagger:${daggerVersion}"
 }
 
 android.applicationVariants.all { variant ->
-/*  def aptOutputDir = project.file("${project.buildDir}/source/apt_generated")*/
-    def aptOutputDir = project.file("build/generated/source/apt/${variant.dirName}")
-/*    aptOutput = file("${project.buildDir}/source/apt/${variant.dirName}")*/
-    aptOutput = project.file("build/generated/source/apt/${variant.dirName}")
-    println "****************************"
-    println "variant: ${variant.name}"
-    println "manifest:  ${variant.processResources.manifestFile}"
-    println "aptOutput:  ${aptOutput}"
-    println "****************************"
+  /*  def aptOutputDir = project.file("${project.buildDir}/source/apt_generated")*/
+  def aptOutputDir = project.file("build/generated/source/apt/${variant.dirName}")
+  /*    aptOutput = file("${project.buildDir}/source/apt/${variant.dirName}")*/
+  aptOutput = project.file("build/generated/source/apt/${variant.dirName}")
+  println "****************************"
+  println "variant: ${variant.name}"
+  println "manifest:  ${variant.processResources.manifestFile}"
+  println "aptOutput:  ${aptOutput}"
+  println "****************************"
 
-    android.sourceSets[getSourceSetName(variant)].java.srcDirs += aptOutput.getPath()
+  android.sourceSets[getSourceSetName(variant)].java.srcDirs += aptOutput.getPath()
 
-    variant.javaCompile.doFirst {
-        println "*** compile doFirst ${variant.name}"
-        aptOutput.mkdirs()
-        variant.javaCompile.options.compilerArgs += [
-                '-processorpath', configurations.apt.getAsPath(),
-                '-AandroidManifestFile=' + variant.processResources.manifestFile,
-                '-AresourcePackageName=com.indexer.hellotaxi.app',
-                '-s', aptOutput
-        ]
-    }
+  variant.javaCompile.doFirst {
+    println "*** compile doFirst ${variant.name}"
+    aptOutput.mkdirs()
+    variant.javaCompile.options.compilerArgs += ['-processorpath', configurations.apt.getAsPath(),
+                                                 '-AandroidManifestFile=' + variant.processResources.manifestFile,
+                                                 '-AresourcePackageName=com.indexer.hellotaxi.app',
+                                                 '-s', aptOutput]
+  }
 
-    variant.javaCompile.source = variant.javaCompile.source.filter { p ->
-        return !p.getPath().startsWith(aptOutputDir.getPath())
-    }
-
+  variant.javaCompile.source = variant.javaCompile.source.filter {
+    p -> return !p.getPath().startsWith(aptOutputDir.getPath())
+  }
 }
 dependencies {
-    compile 'com.android.support:support-v4:19.+'
+  compile 'com.android.support:support-v4:19.+'
+}
+dependencies {
+  compile 'com.google.android.gms:play-services:4.2.42'
+  compile 'com.android.support:appcompat-v7:19.+'
+}
+dependencies {
+  compile 'com.google.android.gms:play-services:4.2.42'
+  compile 'com.android.support:appcompat-v7:19.+'
 }

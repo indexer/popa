@@ -2,54 +2,57 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.indexer.hellotaxi.app">
 
-    <permission
-        android:name="com.google.maps.android.utils.permission.MAPS_RECEIVE"
-        android:protectionLevel="signature" />
+  <permission
+      android:name="com.google.maps.android.utils.permission.MAPS_RECEIVE"
+      android:protectionLevel="signature"/>
 
-    <uses-feature android:name="android.hardware.camera" />
+  <uses-feature android:name="android.hardware.camera"/>
 
-    <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-        
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="com.google.maps.android.utils.permission.MAPS_RECEIVE" />
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+  <uses-permission android:name="android.permission.CAMERA"/>
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+      
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+  <uses-permission android:name="com.google.maps.android.utils.permission.MAPS_RECEIVE"/>
+  <uses-permission android:name="android.permission.INTERNET"/>
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+  <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+  <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
 
-    <uses-feature
-        android:glEsVersion="0x00020000"
-        android:required="true" />
+  <uses-feature
+      android:glEsVersion="0x00020000"
+      android:required="true"/>
 
-    <application
-        android:name=".Application.popa_"
-        android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
+  <application
+      android:name=".Application.popa_"
+      android:allowBackup="true"
+      android:icon="@drawable/ic_launcher"
+      android:label="@string/app_name"
+      android:theme="@style/AppTheme">
+    <meta-data android:name="com.google.android.gms.version"
+        android:value="@integer/google_play_services_version"/>
+    <meta-data
+        android:name="com.google.android.maps.v2.API_KEY"
+        android:value="@string/googlemap"/>
+
+    <activity
+        android:name=".Ui.MainActivity_"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme">
-        <meta-data
-            android:name="com.google.android.gms.version"
-            android:value="@integer/google_play_services_version" />
-        <meta-data
-            android:name="com.google.android.maps.v2.API_KEY"
-            android:value="@string/googlemap" />
+        android:uiOptions="splitActionBarWhenNarrow">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN"/>
 
-        <activity
-            android:name=".Ui.MainActivity_"
-            android:label="@string/app_name"
-            android:uiOptions="splitActionBarWhenNarrow">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER"/>
+      </intent-filter>
+    </activity>
+    <activity android:name=".Ui.CallActivity_"/>
+    <activity
+        android:name=".Ui.SettingActivity_"
+        android:label="@string/title_activity_setting"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".Ui.CallActivity_" />
-        <activity
-            android:name=".Ui.SettingActivity_"
-            android:label="@string/title_activity_setting"></activity>
-    </application>
-
+    <activity
+        android:name=".Ui.LoginActivity_"
+        android:label="@string/title_activity_login">
+    </activity>
+  </application>
 </manifest>
