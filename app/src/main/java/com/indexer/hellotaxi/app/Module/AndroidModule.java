@@ -2,6 +2,7 @@ package com.indexer.hellotaxi.app.Module;
 
 import android.app.Application;
 import android.content.Context;
+import android.location.Criteria;
 import android.location.LocationManager;
 import com.indexer.hellotaxi.app.Application.popa;
 import dagger.Module;
@@ -25,5 +26,17 @@ public class AndroidModule {
 
   @Provides @Singleton LocationManager provideLocationManager() {
     return (LocationManager) application.getSystemService(Context.LOCATION_SERVICE);
+  }
+
+  @Provides @Singleton Criteria provoideCriteria() {
+    Criteria criteria = new Criteria();
+    //Use FINE or COARSE (or NO_REQUIREMENT) here
+    criteria.setAccuracy(Criteria.ACCURACY_FINE);
+    criteria.setPowerRequirement(Criteria.POWER_LOW);
+    criteria.setAltitudeRequired(true);
+    criteria.setSpeedRequired(true);
+    criteria.setCostAllowed(true);
+    criteria.setBearingRequired(true);
+    return criteria;
   }
 }
