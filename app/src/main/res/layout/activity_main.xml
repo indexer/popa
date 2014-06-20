@@ -108,7 +108,7 @@
         <Button
             android:layout_below="@+id/taxiCarNo"
             android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:background="#5FAB5D"
+            android:background="@drawable/button_book"
             android:layout_marginLeft="@dimen/liner"
             android:layout_marginRight="@dimen/liner"
             android:layout_marginBottom="@dimen/liner"
