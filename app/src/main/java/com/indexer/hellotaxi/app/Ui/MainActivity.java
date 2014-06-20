@@ -5,6 +5,7 @@ import android.location.Criteria;
 import android.location.Location;
 import android.location.LocationManager;
 import android.net.ConnectivityManager;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -77,6 +78,11 @@ public class MainActivity extends BasePopaActivity {
         position(position).
         anchor(iconFactory.getAnchorU(), iconFactory.getAnchorV());
     getMap().addMarker(markerOptions);
+  }
+
+  @Override
+  public boolean onCreateOptionsMenu(Menu menu) {
+    return super.onCreateOptionsMenu(menu);
   }
 
   @Override

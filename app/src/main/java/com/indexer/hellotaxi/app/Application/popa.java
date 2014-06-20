@@ -15,8 +15,6 @@ public class popa extends Application {
   private static popa Popa;
 
   ObjectGraph objectGraph;
-  private Double latitude;
-  private Double longitude;
 
   public static popa getInstance() {
     return Popa;
