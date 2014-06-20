@@ -3,12 +3,12 @@
     android:id="@+id/linearView"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="horizontal" >
-<fragment xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/map"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:name="com.google.android.gms.maps.SupportMapFragment">
+    android:orientation="horizontal">
+  <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+      android:id="@+id/map"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:name="com.google.android.gms.maps.SupportMapFragment">
     <RelativeLayout
         android:id="@+id/innerlayout"
         android:visibility="gone"
@@ -21,102 +21,102 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
-        <ImageView
-            android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:layout_marginLeft="@dimen/liner"
-            android:id="@+id/taxiDriver"
-            android:src="@drawable/defaultusericon"
-            android:layout_width="130dp"
-            android:layout_height="130dp" />
-        <TextView
-            android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:layout_toEndOf="@id/taxiDriver"
-            android:layout_marginLeft="@dimen/activity_horizontal_margin"
-            android:id="@+id/taxiDriverName"
-            android:textStyle="bold"
-            android:textSize="14sp"
-            android:text="Swan Htet Aung"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+      <ImageView
+          android:layout_marginTop="@dimen/activity_vertical_margin"
+          android:layout_marginLeft="@dimen/liner"
+          android:id="@+id/taxiDriver"
+          android:src="@drawable/defaultusericon"
+          android:layout_width="130dp"
+          android:layout_height="130dp"/>
+      <TextView
+          android:layout_marginTop="@dimen/activity_vertical_margin"
+          android:layout_toEndOf="@id/taxiDriver"
+          android:layout_marginLeft="@dimen/activity_horizontal_margin"
+          android:id="@+id/taxiDriverName"
+          android:textStyle="bold"
+          android:textSize="14sp"
+          android:text="Swan Htet Aung"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"/>
 
-        <TextView
-            android:id="@+id/Rate"
-            android:drawableLeft="@android:drawable/star_on"
-            android:layout_below="@+id/taxiDriverName"
-            android:layout_marginTop="@dimen/circle"
-            android:layout_marginLeft="@dimen/activity_horizontal_margin"
-            android:gravity="center"
-            android:layout_toEndOf="@id/taxiDriver"
-            android:layout_width="wrap_content"
-            android:textStyle="bold"
-            android:textSize="14sp"
-            android:text="5"
-            android:layout_height="wrap_content" />
+      <TextView
+          android:id="@+id/Rate"
+          android:drawableLeft="@android:drawable/star_on"
+          android:layout_below="@+id/taxiDriverName"
+          android:layout_marginTop="@dimen/circle"
+          android:layout_marginLeft="@dimen/activity_horizontal_margin"
+          android:gravity="center"
+          android:layout_toEndOf="@id/taxiDriver"
+          android:layout_width="wrap_content"
+          android:textStyle="bold"
+          android:textSize="14sp"
+          android:text="5"
+          android:layout_height="wrap_content"/>
 
-        <TextView
-            android:layout_below="@+id/Rate"
-            android:id="@+id/taxiType"
-            android:padding="2dp"
-            android:textColor="@android:color/white"
-            android:background="@drawable/circle_bg_blue"
-            android:layout_toEndOf="@id/taxiDriver"
-            android:layout_marginLeft="@dimen/activity_horizontal_margin"
-            android:layout_marginTop="@dimen/circle"
-            android:text="Type"
-            android:gravity="center"
-            android:textSize="14sp"
-            android:textStyle="bold"
-            android:layout_width="wrap_content"
-            android:layout_height="25dp" />
+      <TextView
+          android:layout_below="@+id/Rate"
+          android:id="@+id/taxiType"
+          android:padding="2dp"
+          android:textColor="@android:color/white"
+          android:background="@drawable/circle_bg_blue"
+          android:layout_toEndOf="@id/taxiDriver"
+          android:layout_marginLeft="@dimen/activity_horizontal_margin"
+          android:layout_marginTop="@dimen/circle"
+          android:text="Type"
+          android:gravity="center"
+          android:textSize="14sp"
+          android:textStyle="bold"
+          android:layout_width="wrap_content"
+          android:layout_height="25dp"/>
 
-        <TextView
-            android:layout_toEndOf="@+id/taxiType"
-            android:layout_below="@+id/Rate"
-            android:layout_marginTop="@dimen/circle"
-            android:id="@+id/taxiTypeCar"
-            android:layout_marginLeft="@dimen/activity_horizontal_margin"
-            android:text="Honda Fit"
-            android:textSize="@dimen/nearby"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+      <TextView
+          android:layout_toEndOf="@+id/taxiType"
+          android:layout_below="@+id/Rate"
+          android:layout_marginTop="@dimen/circle"
+          android:id="@+id/taxiTypeCar"
+          android:layout_marginLeft="@dimen/activity_horizontal_margin"
+          android:text="Honda Fit"
+          android:textSize="@dimen/nearby"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"/>
 
-        <TextView
-            android:layout_below="@+id/taxiType"
-            android:id="@+id/taxiNo"
-            android:textColor="@android:color/white"
-            android:background="@drawable/circle_bg"
-            android:layout_toEndOf="@id/taxiDriver"
-            android:layout_marginLeft="@dimen/activity_horizontal_margin"
-            android:layout_marginTop="@dimen/circle"
-            android:text="Number"
-            android:padding="2dp"
-            android:gravity="center"
-            android:textSize="14sp"
-            android:textStyle="bold"
-            android:layout_width="wrap_content"
-            android:layout_height="25dp" />
-        <TextView
-            android:layout_toEndOf="@+id/taxiNo"
-            android:layout_below="@+id/taxiType"
-            android:layout_marginTop="@dimen/circle"
-            android:id="@+id/taxiCarNo"
-            android:layout_marginLeft="@dimen/activity_horizontal_margin"
-            android:text="5D/123456"
-            android:textSize="14sp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-        <Button
-            android:layout_below="@+id/taxiCarNo"
-            android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:background="@drawable/button_book"
-            android:layout_marginLeft="@dimen/liner"
-            android:layout_marginRight="@dimen/liner"
-            android:layout_marginBottom="@dimen/liner"
-            android:textColor="@android:color/white"
-            android:textStyle="bold"
-            android:text="@string/BookNow"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+      <TextView
+          android:layout_below="@+id/taxiType"
+          android:id="@+id/taxiNo"
+          android:textColor="@android:color/white"
+          android:background="@drawable/circle_bg"
+          android:layout_toEndOf="@id/taxiDriver"
+          android:layout_marginLeft="@dimen/activity_horizontal_margin"
+          android:layout_marginTop="@dimen/circle"
+          android:text="Number"
+          android:padding="2dp"
+          android:gravity="center"
+          android:textSize="14sp"
+          android:textStyle="bold"
+          android:layout_width="wrap_content"
+          android:layout_height="25dp"/>
+      <TextView
+          android:layout_toEndOf="@+id/taxiNo"
+          android:layout_below="@+id/taxiType"
+          android:layout_marginTop="@dimen/circle"
+          android:id="@+id/taxiCarNo"
+          android:layout_marginLeft="@dimen/activity_horizontal_margin"
+          android:text="5D/123456"
+          android:textSize="14sp"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"/>
+      <Button
+          android:layout_below="@+id/taxiCarNo"
+          android:layout_marginTop="@dimen/activity_vertical_margin"
+          android:background="@drawable/button_book"
+          android:layout_marginLeft="@dimen/liner"
+          android:layout_marginRight="@dimen/liner"
+          android:layout_marginBottom="@dimen/liner"
+          android:textColor="@android:color/white"
+          android:textStyle="bold"
+          android:text="@string/BookNow"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"/>
     </RelativeLayout>
   </fragment>
 

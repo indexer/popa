@@ -4,6 +4,7 @@ import android.app.Application;
 import android.content.Context;
 import android.location.Criteria;
 import android.location.LocationManager;
+import android.net.ConnectivityManager;
 import com.indexer.hellotaxi.app.Application.popa;
 import dagger.Module;
 import dagger.Provides;
@@ -38,5 +39,9 @@ public class AndroidModule {
     criteria.setCostAllowed(true);
     criteria.setBearingRequired(true);
     return criteria;
+  }
+
+  @Provides @Singleton ConnectivityManager provideConnectivityManager() {
+    return (ConnectivityManager) application.getSystemService(Context.CONNECTIVITY_SERVICE);
   }
 }
