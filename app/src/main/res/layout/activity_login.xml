@@ -20,6 +20,7 @@
       android:layout_height="wrap_content"/>
 
   <EditText
+      android:background="@drawable/bg_textview"
       android:layout_below="@+id/userPhoneView"
       android:id="@+id/loginUserPhone"
       android:layout_width="match_parent"
@@ -40,22 +41,10 @@
       android:textStyle="bold"
       android:layout_height="wrap_content"/>
 
-  <Button
-      android:id="@+id/userLoginRegister"
-      android:layout_marginBottom="5dp"
-      android:background="#E34737"
-      android:textColor="@drawable/textcolor_selector"
-
-      android:layout_below="@+id/btnLogin"
-      android:layout_width="match_parent"
-      android:text="@string/register"
-      android:textStyle="bold"
-      android:layout_height="wrap_content"/>
-
   <View
       android:layout_marginTop="5dp"
       android:id="@+id/header"
-      android:layout_below="@+id/userLoginRegister"
+      android:layout_below="@+id/btnLogin"
       android:layout_height="3dp"
       android:layout_width="match_parent"
       android:layout_marginBottom="5dp"
