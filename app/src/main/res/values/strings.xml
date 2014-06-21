@@ -33,6 +33,8 @@
     <string name="login">Login</string>
     <string name="enterphonenumber">Enter Phone Number</string>
     <string name="register">REGISTER ?</string>
+    <string name="driver">Driver</string>
+    <string name="passenger">Passenger</string>
 
     <array name="carTypeList">
         <item>Toyota</item>

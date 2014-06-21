@@ -67,6 +67,7 @@
     <orderEntry type="library" exported="" name="appcompat-v7-19.1.0" level="project" />
     <orderEntry type="library" exported="" name="support-v4-19.1.0" level="project" />
     <orderEntry type="library" exported="" name="javax.inject-1" level="project" />
+    <orderEntry type="library" exported="" name="wearable-preview-support" level="project" />
     <orderEntry type="library" exported="" name="dagger-1.0.0" level="project" />
     <orderEntry type="library" exported="" name="androidannotations-api-3.0" level="project" />
   </component>

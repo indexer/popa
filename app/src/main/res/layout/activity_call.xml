@@ -14,14 +14,14 @@
       android:layout_height="match_parent">
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
       <ImageView
           android:id="@+id/imgUser"
           android:layout_marginLeft="@dimen/liner"
           android:layout_marginRight="@dimen/liner"
           android:layout_marginTop="@dimen/circle"
           android:src="@drawable/defaultusericon"
-          android:layout_width="match_parent"
+          android:layout_width="fill_parent"
           android:scaleType="fitXY"
           android:layout_height="wrap_content"/>
 
@@ -36,13 +36,13 @@
           android:layout_height="wrap_content">
         <RadioButton
             android:id="@+id/radioPassenger"
-            android:text="Passenger"
+            android:text="@string/passenger"
             android:layout_width="0dp"
             android:layout_weight=".50"
             android:layout_height="wrap_content"/>
         <RadioButton
             android:id="@+id/radioDriver"
-            android:text="Driver"
+            android:text="@string/driver"
             android:layout_width="0dp"
             android:layout_weight=".50"
             android:layout_height="wrap_content"/>
@@ -64,7 +64,7 @@
           android:layout_below="@+id/userName"
           android:id="@+id/userPhone"
           android:layout_marginTop="@dimen/circle"
-          android:inputType="number"
+          android:inputType="phone"
           android:hint="@string/phonenumber"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"/>

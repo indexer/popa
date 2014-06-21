@@ -40,30 +40,35 @@
       android:textStyle="bold"
       android:layout_height="wrap_content"/>
 
-  <CheckBox
-      android:id="@+id/rememberLogin"
-      android:layout_gravity="center"
-      android:text="@string/rememberlogin"
+  <Button
+      android:id="@+id/userLoginRegister"
+      android:layout_marginBottom="5dp"
+      android:background="#E34737"
+      android:textColor="@drawable/textcolor_selector"
+
       android:layout_below="@+id/btnLogin"
       android:layout_width="match_parent"
+      android:text="@string/register"
+      android:textStyle="bold"
       android:layout_height="wrap_content"/>
 
   <View
       android:layout_marginTop="5dp"
       android:id="@+id/header"
-      android:layout_below="@+id/rememberLogin"
+      android:layout_below="@+id/userLoginRegister"
       android:layout_height="3dp"
       android:layout_width="match_parent"
       android:layout_marginBottom="5dp"
       android:background="?android:attr/listDivider"/>
-  <TextView
+
+
+  <CheckBox
+      android:id="@+id/rememberLogin"
+      android:layout_gravity="center"
+      android:textAppearance="?android:attr/textAppearanceSmall"
+      android:text="@string/rememberlogin"
       android:layout_below="@+id/header"
-      android:textStyle="bold|italic"
-      android:textColor="#5FAB5D"
       android:layout_width="match_parent"
-      android:text="@string/register"
-      android:textAppearance="?android:attr/textAppearanceSearchResultTitle"
-      android:gravity="center"
       android:layout_height="wrap_content"/>
 
 
