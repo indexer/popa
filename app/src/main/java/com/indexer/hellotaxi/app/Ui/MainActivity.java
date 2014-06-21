@@ -30,17 +30,16 @@ public class MainActivity extends BasePopaActivity {
   @Inject LocationManager locationManager;
   @Inject Criteria mCriteria;
   @Inject ConnectivityManager connectivityManager;
+
   mlocationListener mlocationListener = new mlocationListener();
 
   @ViewById(R.id.taxiDriverName) TextView txtDriverName;
 
   //ToDo map move care to the taxi location
   @Click(R.id.innerlayout) void changeCard() {
-    if (txtDriverName.getText().equals("Swan Htet Aung")) {
-      txtDriverName.setText("Arar Aung");
-    } else {
-      txtDriverName.setText("Swan Htet Aung");
-    }
+    txtDriverName.setText(
+        txtDriverName.getText().equals("Swan Htet Aung") ? "Arar Aung" : "Swan Htet Aung"
+    );
   }
 
   @AfterViews void title() {
@@ -87,18 +86,17 @@ public class MainActivity extends BasePopaActivity {
 
   @Override
   public boolean onOptionsItemSelected(MenuItem item) {
-    switch (item.getItemId()) {
+    int i = item.getItemId();
+    switch (i) {
       case android.R.id.home:
         this.onBackPressed();
         finish();
         return false;
-      case R.id.action_add:
-        //thi will going to the Register
+      case R.id.action_add: //thi will going to the Register
         Intent intentToCallActivity = new Intent(this, CallActivity_.class);
         startActivity(intentToCallActivity);
         return false;
-      case R.id.action_settings:
-        //this will going to the SettingActiivty
+      case R.id.action_settings: //this will going to the SettingActiivty
         Intent intentToSettingActivity = new Intent(this, SettingActivity_.class);
         startActivity(intentToSettingActivity);
         return false;

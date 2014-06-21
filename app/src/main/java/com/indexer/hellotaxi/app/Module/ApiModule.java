@@ -13,7 +13,7 @@ import retrofit.client.OkClient;
 /**
  * Created by yemonkyaw on 6/21/14.
  */
-@Module(library = true , complete = false)
+@Module(library = true, complete = false)
 public class ApiModule {
   public static final String apiServer = "www.google.com";
 
