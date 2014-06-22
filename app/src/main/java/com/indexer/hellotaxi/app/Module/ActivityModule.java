@@ -18,7 +18,7 @@ package com.indexer.hellotaxi.app.Module;
 import android.content.Context;
 import com.indexer.hellotaxi.app.Base.BasePopaActivity;
 import com.indexer.hellotaxi.app.ForActivity;
-import com.indexer.hellotaxi.app.Ui.ActivityTitleController;
+import com.indexer.hellotaxi.app.Controller.ActivityTitleController;
 import com.indexer.hellotaxi.app.Ui.CallActivity_;
 import com.indexer.hellotaxi.app.Ui.MainActivity_;
 import dagger.Module;
