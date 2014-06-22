@@ -2,13 +2,14 @@ package com.indexer.hellotaxi.app.Ui;
 
 import android.app.Activity;
 import android.view.MenuItem;
+import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.indexer.hellotaxi.app.R;
+import javax.inject.Inject;
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.EActivity;
 
 @EActivity(R.layout.activity_login)
 public class LoginActivity extends Activity {
-
   @AfterViews void showLoginUi() {
     getActionBar().setDisplayHomeAsUpEnabled(true);
     getActionBar().setHomeButtonEnabled(true);

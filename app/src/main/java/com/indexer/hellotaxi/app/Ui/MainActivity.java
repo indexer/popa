@@ -8,6 +8,9 @@ import android.net.ConnectivityManager;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
+import android.widget.Toast;
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
@@ -18,7 +21,6 @@ import com.indexer.hellotaxi.app.Listener.mapMarkerListener;
 import com.indexer.hellotaxi.app.Listener.mlocationListener;
 import com.indexer.hellotaxi.app.R;
 import javax.inject.Inject;
-import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.OptionsMenu;
@@ -38,18 +40,14 @@ public class MainActivity extends BasePopaActivity {
   //ToDo map move care to the taxi location
   @Click(R.id.innerlayout) void changeCard() {
     txtDriverName.setText(
-        txtDriverName.getText().equals("Swan Htet Aung") ? "Arar Aung" : "Swan Htet Aung"
-    );
-  }
-
-  @AfterViews void title() {
-    getSupportActionBar().setTitle(getResources().getString(R.string.title_activity_call));
+        txtDriverName.getText().equals("Swan Htet Aung") ? "Arar Aung" : "Swan Htet Aung");
   }
 
   @Override @UiThread
   protected void start() {
     //All your normal criteria setup
     // let Android select the right location provider for you
+    getSupportActionBar().setTitle(getResources().getString(R.string.title_activity_call));
     String myProvider = locationManager.getBestProvider(mCriteria, true);
     locationManager.requestLocationUpdates(myProvider, 0, 0, mlocationListener);
     mapMarkerListener mapMarkerListener = new mapMarkerListener(this);
@@ -111,6 +109,25 @@ public class MainActivity extends BasePopaActivity {
   @Override protected void onDestroy() {
     super.onDestroy();
     locationManager.removeUpdates(mlocationListener);
+  }
+
+  @Override protected void onResume() {
+    super.onResume();
+    checkPlayServices();
+  }
+
+  private boolean checkPlayServices() {
+    int status = GooglePlayServicesUtil.isGooglePlayServicesAvailable(this);
+    if (status != ConnectionResult.SUCCESS) {
+      if (GooglePlayServicesUtil.isUserRecoverableError(status)) {
+        Toast.makeText(this, "User Recoverable Error", Toast.LENGTH_LONG).show();
+      } else {
+        Toast.makeText(this, "This device is not supported.", Toast.LENGTH_LONG).show();
+        finish();
+      }
+      return false;
+    }
+    return true;
   }
 }
 
