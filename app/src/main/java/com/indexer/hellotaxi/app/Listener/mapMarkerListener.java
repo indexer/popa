@@ -26,7 +26,7 @@ public class mapMarkerListener implements GoogleMap.OnMarkerClickListener {
   public boolean onMarkerClick(Marker marker) {
     AnimationSet set = new AnimationSet(true);
     Animation animation = new AlphaAnimation(0.0f, 1.0f);
-    animation.setDuration(500);
+    animation.setDuration(300);
     set.addAnimation(animation);
 
     animation =
