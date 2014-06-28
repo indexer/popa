@@ -33,11 +33,12 @@ public class mlocationListener implements LocationListener {
 
   @Override
   public void onProviderEnabled(String s) {
+    Log.e("Provider","Enable Provide");
 
   }
 
   @Override public void onProviderDisabled(String s) {
-    boolean gpsEnable;
+   /* boolean gpsEnable;
     boolean networkEnable = false;
     //ToDo Check why this not work :'(
     gpsEnable = locationManager.isProviderEnabled(locationManager.GPS_PROVIDER);
@@ -62,7 +63,7 @@ public class mlocationListener implements LocationListener {
 
         }
       });
-      dialog.show();
-    }
+      dialog.show();*/
+
   }
 }
