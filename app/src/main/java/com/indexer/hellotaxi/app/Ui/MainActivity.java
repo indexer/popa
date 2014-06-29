@@ -33,7 +33,7 @@ public class MainActivity extends BasePopaActivity {
   @Inject Criteria mCriteria;
   @Inject ConnectivityManager connectivityManager;
 
-  mlocationListener mlocationListener = new mlocationListener();
+  mlocationListener mlocationListener = new mlocationListener(this);
 
   @ViewById(R.id.taxiDriverName) TextView txtDriverName;
 
