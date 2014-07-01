@@ -23,7 +23,7 @@
   <!-- ToDo Api Urgnet @Indexer-->
   <string name="base_url"></string>
   <string name="nearby_url">https://maps.googleapis.com/maps/api/place/nearbysearch/json?</string>
-  <string name="companytaxi_url"></string>
+  <string name="companytaxi_url">http://syspopa.com/company/taxi</string>
 
 
   <string name="loginPhone">Phone</string>
