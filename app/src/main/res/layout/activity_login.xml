@@ -20,7 +20,6 @@
       android:layout_height="wrap_content"/>
 
   <EditText
-      android:background="@drawable/bg_textview"
       android:layout_below="@+id/userPhoneView"
       android:id="@+id/loginUserPhone"
       android:layout_width="match_parent"
