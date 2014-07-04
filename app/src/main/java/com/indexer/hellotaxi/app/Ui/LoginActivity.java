@@ -2,17 +2,19 @@ package com.indexer.hellotaxi.app.ui;
 
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
+import android.support.v7.app.ActionBarActivity;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.EditText;
 import com.indexer.hellotaxi.app.R;
-import com.indexer.hellotaxi.app.base.BasePopaActivity;
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.ViewById;
 
 @EActivity(R.layout.activity_login)
-public class LoginActivity extends BasePopaActivity {
+public class LoginActivity extends ActionBarActivity {
 
   @ViewById(R.id.btnLogin) Button btnLogin;
   @ViewById(R.id.userPhoneEditText) EditText userPhoneEditText;
@@ -22,13 +24,29 @@ public class LoginActivity extends BasePopaActivity {
     mActionBar.setDisplayHomeAsUpEnabled(true);
     mActionBar.setHomeButtonEnabled(true);
     mActionBar.setIcon(R.drawable.ic_launcher);
+    btnLogin.setEnabled(false);
 
-    btnLogin.setEnabled(false); // Disable at first place
-    enableBtn(userPhoneEditText, btnLogin);
+    userPhoneEditText.addTextChangedListener(new TextWatcher() {
+      @Override public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+      }
+
+      @Override public void onTextChanged(CharSequence s, int start, int before, int count) {
+      }
+
+      @Override public void afterTextChanged(Editable s) {
+        if (s.toString().trim().length() == 0) {
+          btnLogin.setEnabled(false);
+        } else {
+          btnLogin.setEnabled(true);
+        }
+      }
+    });
   }
 
   @Override protected void onCreate(Bundle saveInstanceState) {
     super.onCreate(saveInstanceState);
+    // btnLogin.setEnabled(false); // Disable at first place
+    // enableBtn(userPhoneEditText, btnLogin);
   }
 
   @Override
@@ -42,8 +60,5 @@ public class LoginActivity extends BasePopaActivity {
         return false;
     }
     return false;
-  }
-
-  @Override protected void start() {
   }
 }

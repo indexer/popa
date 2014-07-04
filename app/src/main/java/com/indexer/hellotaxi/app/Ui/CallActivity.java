@@ -14,14 +14,12 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.Spinner;
-import com.indexer.hellotaxi.app.controller.ActivityTitleController;
-import com.indexer.hellotaxi.app.listener.newPhotoListener;
 import com.indexer.hellotaxi.app.R;
+import com.indexer.hellotaxi.app.listener.newPhotoListener;
 import java.io.FileDescriptor;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
-import javax.inject.Inject;
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EActivity;
@@ -34,7 +32,7 @@ import org.androidannotations.annotations.res.StringRes;
 public class CallActivity extends ActionBarActivity {
   Uri mImageUri;
 
-  @Inject ActivityTitleController titleController;
+/*  @Inject ActivityTitleController titleController;*/
   @StringRes(R.string.Register) String title;
   @StringArrayRes(R.array.carTypeList) String[] carTypeList;
   @ViewById(R.id.carType) Spinner carType;

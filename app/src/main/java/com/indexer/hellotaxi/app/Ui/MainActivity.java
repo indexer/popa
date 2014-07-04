@@ -16,10 +16,10 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.maps.android.ui.IconGenerator;
+import com.indexer.hellotaxi.app.R;
 import com.indexer.hellotaxi.app.base.BasePopaActivity;
 import com.indexer.hellotaxi.app.listener.mapMarkerListener;
 import com.indexer.hellotaxi.app.listener.mlocationListener;
-import com.indexer.hellotaxi.app.R;
 import javax.inject.Inject;
 import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EActivity;
@@ -33,14 +33,14 @@ public class MainActivity extends BasePopaActivity {
   @Inject Criteria mCriteria;
   @Inject ConnectivityManager connectivityManager;
 
-  mlocationListener mlocationListener = new mlocationListener(this);
+  mlocationListener mLocationListener = new mlocationListener(this);
 
   @ViewById(R.id.taxiDriverName) TextView txtDriverName;
 
   //ToDo map move care to the taxi location
   @Click(R.id.innerlayout) void changeCard() {
     txtDriverName.setText(
-        txtDriverName.getText().equals("Swan Htet Aung") ? "Arar Aung" : "Swan Htet Aung");
+        txtDriverName.getText().equals("Swan Htet Aung") ? "Arkar Aung" : "Swan Htet Aung");
   }
 
   @Override @UiThread
@@ -49,7 +49,7 @@ public class MainActivity extends BasePopaActivity {
     // let Android select the right location provider for you
     getSupportActionBar().setTitle(getResources().getString(R.string.title_activity_call));
     String myProvider = locationManager.getBestProvider(mCriteria, true);
-    locationManager.requestLocationUpdates(myProvider, 0, 0, mlocationListener);
+    locationManager.requestLocationUpdates(myProvider, 0, 0, mLocationListener);
     mapMarkerListener mapMarkerListener = new mapMarkerListener(this);
     IconGenerator iconFactory = new IconGenerator(this);
     getMap().setMyLocationEnabled(true);
@@ -108,7 +108,7 @@ public class MainActivity extends BasePopaActivity {
 
   @Override protected void onDestroy() {
     super.onDestroy();
-    locationManager.removeUpdates(mlocationListener);
+    locationManager.removeUpdates(mLocationListener);
   }
 
   @Override protected void onResume() {

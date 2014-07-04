@@ -19,8 +19,7 @@
       android:layout_marginTop="5dp"
       >
     <EditText
-        android:layout_below="@+id/userPhoneEditText"
-        android:id="@+id/loginUserPhone"
+        android:id="@+id/userPhoneEditText"
         android:layout_width="match_parent"
         android:layout_margin="5dp"
         android:textAppearance="?android:attr/textAppearanceMedium"
