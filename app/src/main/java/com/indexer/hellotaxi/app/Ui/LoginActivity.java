@@ -1,16 +1,19 @@
 package com.indexer.hellotaxi.app.ui;
 
-import android.app.Activity;
+import android.support.v7.app.ActionBar;
 import android.view.MenuItem;
 import com.indexer.hellotaxi.app.R;
+import com.indexer.hellotaxi.app.base.BasePopaActivity;
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.EActivity;
 
 @EActivity(R.layout.activity_login)
-public class LoginActivity extends Activity {
+public class LoginActivity extends BasePopaActivity {
   @AfterViews void showLoginUi() {
-    getActionBar().setDisplayHomeAsUpEnabled(true);
-    getActionBar().setHomeButtonEnabled(true);
+    ActionBar mActionBar = getSupportActionBar();
+    mActionBar.setDisplayHomeAsUpEnabled(true);
+    mActionBar.setHomeButtonEnabled(true);
+    mActionBar.setIcon(R.drawable.ic_launcher);
   }
 
   @Override
@@ -24,5 +27,9 @@ public class LoginActivity extends Activity {
         return false;
     }
     return false;
+  }
+
+  @Override protected void start() {
+
   }
 }
