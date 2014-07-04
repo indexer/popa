@@ -2,8 +2,8 @@ package com.indexer.hellotaxi.app.Ui;
 
 import android.support.v7.app.ActionBar;
 import android.view.MenuItem;
+import com.indexer.hellotaxi.app.Base.BasePopaActivity;
 import com.indexer.hellotaxi.app.R;
-import com.indexer.hellotaxi.app.base.BasePopaActivity;
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.EActivity;
 

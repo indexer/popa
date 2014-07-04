@@ -13,28 +13,19 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.indexer.hellotaxi.app.module;
+package com.indexer.hellotaxi.app.Module;
 
 import android.content.Context;
-import com.indexer.hellotaxi.app.base.BasePopaActivity;
-import com.indexer.hellotaxi.app.controller.ActivityTitleController;
+import com.indexer.hellotaxi.app.Base.BasePopaActivity;
+import com.indexer.hellotaxi.app.Controller.ActivityTitleController;
 import com.indexer.hellotaxi.app.ForActivity;
-import com.indexer.hellotaxi.app.ui.CallActivity_;
-import com.indexer.hellotaxi.app.ui.LoginActivity_;
-import com.indexer.hellotaxi.app.ui.MainActivity_;
-import com.indexer.hellotaxi.app.ui.SettingActivity_;
 import dagger.Module;
 import dagger.Provides;
 import javax.inject.Singleton;
 
-/**
- * This module represents objects which exist only for the scope of a single activity. We can
- * safely create singletons using the activity instance because the entire object graph will only
- * ever exist inside of that activity.
- */
 @Module(
     injects = {
-        MainActivity_.class, CallActivity_.class, LoginActivity_.class, SettingActivity_.class
+/*        MainActivity_.class, CallActivity_.class, LoginActivity_.class, SettingActivity_.class*/
     },
     addsTo = AndroidModule.class,
     library = true)

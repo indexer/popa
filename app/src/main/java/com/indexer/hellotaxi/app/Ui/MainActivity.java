@@ -1,4 +1,4 @@
-package com.indexer.hellotaxi.app.ui;
+package com.indexer.hellotaxi.app.Ui;
 
 import android.content.Intent;
 import android.location.Criteria;
@@ -16,9 +16,9 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.maps.android.ui.IconGenerator;
-import com.indexer.hellotaxi.app.base.BasePopaActivity;
-import com.indexer.hellotaxi.app.listener.mapMarkerListener;
-import com.indexer.hellotaxi.app.listener.mlocationListener;
+
+import com.indexer.hellotaxi.app.Base.BasePopaActivity;
+import com.indexer.hellotaxi.app.Listener.mapMarkerListener;
 import com.indexer.hellotaxi.app.R;
 import javax.inject.Inject;
 import org.androidannotations.annotations.Click;
@@ -33,7 +33,7 @@ public class MainActivity extends BasePopaActivity {
   @Inject Criteria mCriteria;
   @Inject ConnectivityManager connectivityManager;
 
-  mlocationListener mlocationListener = new mlocationListener(this);
+/*  mlocationListener mlocationListener = new mlocationListener(this);*/
 
   @ViewById(R.id.taxiDriverName) TextView txtDriverName;
 
@@ -47,21 +47,21 @@ public class MainActivity extends BasePopaActivity {
   protected void start() {
     //All your normal criteria setup
     // let Android select the right location provider for you
-    getSupportActionBar().setTitle(getResources().getString(R.string.title_activity_call));
+/*    getSupportActionBar().setTitle(getResources().getString(R.string.title_activity_call));*/
     String myProvider = locationManager.getBestProvider(mCriteria, true);
-    locationManager.requestLocationUpdates(myProvider, 0, 0, mlocationListener);
+    /*locationManager.requestLocationUpdates(myProvider, 0, 0, mlocationListener);
     mapMarkerListener mapMarkerListener = new mapMarkerListener(this);
-    IconGenerator iconFactory = new IconGenerator(this);
+    IconGenerator iconFactory = new IconGenerator(this);*/
     getMap().setMyLocationEnabled(true);
     Location location = locationManager.getLastKnownLocation(myProvider);
     if (location != null) {
       getMap().moveCamera(CameraUpdateFactory.newLatLngZoom(
           new LatLng(location.getLatitude(), location.getLongitude()), 19));
-      iconFactory.setStyle(IconGenerator.STYLE_GREEN);
+      /*iconFactory.setStyle(IconGenerator.STYLE_GREEN);
       addIcon(iconFactory, "3/W", new LatLng(location.getLatitude(), location.getLongitude()));
       addIcon(iconFactory, "9/C",
           new LatLng(location.getLatitude() + 0.00002, location.getLongitude() + 0.0005));
-      getMap().setOnMarkerClickListener(mapMarkerListener);
+      getMap().setOnMarkerClickListener(mapMarkerListener);*/
     } else {
       //ToDo request user location and find near by taxi here
       getMap().moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(16, 96), 19));
@@ -91,16 +91,16 @@ public class MainActivity extends BasePopaActivity {
         finish();
         return false;
       case R.id.action_add: //thi will going to the Register
-        Intent intentToCallActivity = new Intent(this, CallActivity_.class);
-        startActivity(intentToCallActivity);
+        /*Intent intentToCallActivity = new Intent(this, CallActivity_.class);
+        startActivity(intentToCallActivity);*/
         return false;
       case R.id.action_settings: //this will going to the SettingActiivty
-        Intent intentToSettingActivity = new Intent(this, SettingActivity_.class);
-        startActivity(intentToSettingActivity);
+        /*Intent intentToSettingActivity = new Intent(this, SettingActivity_.class);
+        startActivity(intentToSettingActivity);*/
         return false;
       case R.id.action_login:
-        Intent intentToLoginActivity = new Intent(this, LoginActivity_.class);
-        startActivity(intentToLoginActivity);
+/*        Intent intentToLoginActivity = new Intent(this, LoginActivity_.class);*/
+/*        startActivity(intentToLoginActivity);*/
         return false;
     }
     return false;
@@ -108,7 +108,7 @@ public class MainActivity extends BasePopaActivity {
 
   @Override protected void onDestroy() {
     super.onDestroy();
-    locationManager.removeUpdates(mlocationListener);
+/*    locationManager.removeUpdates(mlocationListener);*/
   }
 
   @Override protected void onResume() {

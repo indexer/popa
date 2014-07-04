@@ -27,7 +27,7 @@
       />
 
   <application
-      android:name=".application.popa_"
+      android:name=".Application.popa_"
       android:allowBackup="true"
       android:icon="@drawable/ic_launcher"
       android:label="@string/app_name"
@@ -39,7 +39,7 @@
         android:value="@string/googlemap"/>
 
     <activity
-        android:name=".ui.MainActivity_"
+        android:name=".Ui.MainActivity_"
         android:label="@string/app_name"
         android:uiOptions="splitActionBarWhenNarrow">
       <intent-filter>
@@ -48,14 +48,14 @@
         <category android:name="android.intent.category.LAUNCHER"/>
       </intent-filter>
     </activity>
-    <activity android:name=".ui.CallActivity_"
+    <activity android:name=".Ui.CallActivity_"
         android:label="@string/Register"/>
     <activity
-        android:name=".ui.SettingActivity_"
+        android:name=".Ui.SettingActivity_"
         android:label="@string/title_activity_setting"/>
 
     <activity
-        android:name=".ui.LoginActivity_"
+        android:name=".Ui.LoginActivity_"
         android:icon="@drawable/ic_launcher"
         android:label="@string/title_activity_login">
     </activity>

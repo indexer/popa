@@ -6,10 +6,7 @@ import android.location.Location;
 import android.location.LocationListener;
 import android.os.Bundle;
 import android.util.Log;
-
-/**
- * Created by yemonkyaw on 5/10/14.
- */
+import com.indexer.hellotaxi.app.Ui.MainActivity;
 
 public class mlocationListener implements LocationListener {
   Activity mActivity;
