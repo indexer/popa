@@ -18,6 +18,7 @@
   <string name="carnumber">Car Number</string>
   <string name="username">User Name</string>
   <string name="rememberlogin">Remember Login ?</string>
+  <string name="enter_phone_number">Enter your phone number</string>
 
   <!-- api url -->
   <!-- ToDo Api Urgnet @Indexer-->
@@ -51,5 +52,6 @@
   <string name="searchBy">Search By</string>
   <string name="title_activity_setting">Setting</string>
   <string name="title_activity_login">Login</string>
+
 
 </resources>

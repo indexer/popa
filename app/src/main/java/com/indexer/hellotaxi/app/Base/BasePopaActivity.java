@@ -1,6 +1,7 @@
 package com.indexer.hellotaxi.app.base;
 
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.SupportMapFragment;
@@ -14,6 +15,7 @@ import java.util.List;
 public abstract class BasePopaActivity extends ActionBarActivity {
   private ObjectGraph activityGraph;
   private GoogleMap mMap;
+
 
   protected int getLayoutId() {
     return R.layout.activity_main;

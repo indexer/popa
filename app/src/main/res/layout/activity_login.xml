@@ -11,30 +11,30 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.indexer.hellotaxi.app.debug.LoginActivity">
 
-  <TextView
-      android:id="@+id/userPhoneView"
+  <com.indexer.hellotaxi.app.ui.FloatLabelLayout
+      android:id="@+id/loginUserPhone_float"
       android:layout_width="match_parent"
-      android:text="@string/enterphonenumber"
-      android:layout_marginBottom="5dp"
-      android:textAppearance="?android:attr/textAppearanceMedium"
-      android:layout_height="wrap_content"/>
-
-  <EditText
-      android:layout_below="@+id/userPhoneView"
-      android:id="@+id/loginUserPhone"
-      android:layout_width="match_parent"
-      android:layout_marginBottom="5dp"
-      android:textAppearance="?android:attr/textAppearanceMedium"
-      android:hint="@string/loginPhone"
-      android:inputType="phone"
-      android:layout_height="wrap_content"/>
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="10dp"
+      android:layout_marginTop="5dp"
+      >
+    <EditText
+        android:layout_below="@+id/userPhoneView"
+        android:id="@+id/loginUserPhone"
+        android:layout_width="match_parent"
+        android:layout_margin="5dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:hint="@string/enter_phone_number"
+        android:inputType="phone"
+        android:layout_height="wrap_content"/>
+  </com.indexer.hellotaxi.app.ui.FloatLabelLayout>
 
   <Button
       android:id="@+id/btnLogin"
       android:layout_marginBottom="5dp"
-      android:textColor="@drawable/textcolor_selector"
+      android:textColor="@android:color/white"
       android:background="@drawable/button_book"
-      android:layout_below="@+id/loginUserPhone"
+      android:layout_below="@+id/loginUserPhone_float"
       android:layout_width="match_parent"
       android:text="@string/login"
       android:textStyle="bold"
