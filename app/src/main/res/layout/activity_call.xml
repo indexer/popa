@@ -51,7 +51,6 @@
 
       <EditText
           android:id="@+id/userName"
-          android:background="@drawable/bg_textview"
           android:layout_marginLeft="@dimen/liner"
           android:layout_marginRight="@dimen/liner"
           android:layout_marginTop="@dimen/circle"
@@ -61,7 +60,6 @@
           android:layout_height="wrap_content"/>
 
       <EditText
-          android:background="@drawable/bg_textview"
           android:layout_marginLeft="@dimen/liner"
           android:layout_marginRight="@dimen/liner"
           android:layout_below="@+id/userName"
@@ -83,7 +81,6 @@
       </Spinner>
 
       <EditText
-          android:background="@drawable/bg_textview"
           android:layout_marginLeft="@dimen/liner"
           android:layout_marginRight="@dimen/liner"
           android:visibility="gone"
