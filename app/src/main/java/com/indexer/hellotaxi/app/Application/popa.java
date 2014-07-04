@@ -1,7 +1,7 @@
-package com.indexer.hellotaxi.app.application;
+package com.indexer.hellotaxi.app.Application;
 
 import android.app.Application;
-import com.indexer.hellotaxi.app.module.AndroidModule;
+import com.indexer.hellotaxi.app.Module.AndroidModule;
 import dagger.ObjectGraph;
 import java.util.Arrays;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.indexer.hellotaxi.app.module;
+package com.indexer.hellotaxi.app.Module;
 
 import com.squareup.okhttp.OkHttpClient;
 import dagger.Module;

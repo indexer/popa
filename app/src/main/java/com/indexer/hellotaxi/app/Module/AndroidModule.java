@@ -1,11 +1,11 @@
-package com.indexer.hellotaxi.app.module;
+package com.indexer.hellotaxi.app.Module;
 
 import android.app.Application;
 import android.content.Context;
 import android.location.Criteria;
 import android.location.LocationManager;
 import android.net.ConnectivityManager;
-import com.indexer.hellotaxi.app.application.popa;
+import com.indexer.hellotaxi.app.Application.popa;
 import dagger.Module;
 import dagger.Provides;
 import javax.inject.Singleton;

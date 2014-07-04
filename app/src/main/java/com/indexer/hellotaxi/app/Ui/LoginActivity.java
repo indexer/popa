@@ -1,4 +1,4 @@
-package com.indexer.hellotaxi.app.ui;
+package com.indexer.hellotaxi.app.Ui;
 
 import android.app.Activity;
 import android.view.MenuItem;
