@@ -4,11 +4,10 @@ buildscript {
   }
   dependencies {
     classpath 'com.android.tools.build:gradle:0.12.+'
-
   }
 }
 
-apply plugin: 'android'
+apply plugin: 'com.android.application'
 
 android {
   compileSdkVersion 19
@@ -60,12 +59,13 @@ android {
 
 dependencies {
   compile fileTree(dir: 'libs', include: ['*.jar'])
+  compile files('libs/nineoldandroids-2.4.0.jar')
   compile 'com.squareup.retrofit:retrofit:1.6.0'
   compile 'com.squareup.okhttp:okhttp:2.0.0'
-  compile 'com.google.android.gms:play-services:+'
   compile 'com.android.support:support-v4:19.+'
   compile 'com.android.support:appcompat-v7:19.+'
   compile 'com.google.maps.android:android-maps-utils:0.2.+'
+  compile 'com.google.android.gms:play-services:4.4.52'
 }
 
 def getSourceSetName(variant) {
@@ -111,15 +111,4 @@ android.applicationVariants.all { variant ->
   variant.javaCompile.source = variant.javaCompile.source.filter {
     p -> return !p.getPath().startsWith(aptOutputDir.getPath())
   }
-}
-dependencies {
-  compile 'com.android.support:support-v4:19.+'
-}
-dependencies {
-  compile 'com.google.android.gms:play-services:4.4.52'
-  compile 'com.android.support:appcompat-v7:19.+'
-}
-dependencies {
-  compile 'com.google.android.gms:play-services:4.4.52'
-  compile 'com.android.support:appcompat-v7:19.+'
 }
