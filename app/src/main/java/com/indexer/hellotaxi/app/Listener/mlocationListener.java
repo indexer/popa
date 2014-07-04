@@ -1,4 +1,4 @@
-package com.indexer.hellotaxi.app.Listener;
+package com.indexer.hellotaxi.app.listener;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -6,7 +6,7 @@ import android.location.Location;
 import android.location.LocationListener;
 import android.os.Bundle;
 import android.util.Log;
-import com.indexer.hellotaxi.app.Ui.MainActivity;
+import com.indexer.hellotaxi.app.ui.MainActivity;
 
 /**
  * Created by yemonkyaw on 5/10/14.

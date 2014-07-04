@@ -1,10 +1,8 @@
-package com.indexer.hellotaxi.app.Ui;
+package com.indexer.hellotaxi.app.ui;
 
 import android.app.Activity;
 import android.view.MenuItem;
-import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.indexer.hellotaxi.app.R;
-import javax.inject.Inject;
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.EActivity;
 

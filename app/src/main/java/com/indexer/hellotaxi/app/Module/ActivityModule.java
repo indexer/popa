@@ -13,11 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.indexer.hellotaxi.app.Module;
+package com.indexer.hellotaxi.app.module;
 
 import android.content.Context;
-import com.indexer.hellotaxi.app.Base.BasePopaActivity;
-import com.indexer.hellotaxi.app.Controller.ActivityTitleController;
+import com.indexer.hellotaxi.app.base.BasePopaActivity;
+import com.indexer.hellotaxi.app.controller.ActivityTitleController;
 import com.indexer.hellotaxi.app.ForActivity;
 import com.indexer.hellotaxi.app.Ui.CallActivity_;
 import com.indexer.hellotaxi.app.Ui.LoginActivity_;

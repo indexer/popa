@@ -1,4 +1,4 @@
-package com.indexer.hellotaxi.app.Ui;
+package com.indexer.hellotaxi.app.ui;
 
 import android.content.Intent;
 import android.location.Criteria;
@@ -16,9 +16,9 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.maps.android.ui.IconGenerator;
-import com.indexer.hellotaxi.app.Base.BasePopaActivity;
-import com.indexer.hellotaxi.app.Listener.mapMarkerListener;
-import com.indexer.hellotaxi.app.Listener.mlocationListener;
+import com.indexer.hellotaxi.app.base.BasePopaActivity;
+import com.indexer.hellotaxi.app.listener.mapMarkerListener;
+import com.indexer.hellotaxi.app.listener.mlocationListener;
 import com.indexer.hellotaxi.app.R;
 import javax.inject.Inject;
 import org.androidannotations.annotations.Click;

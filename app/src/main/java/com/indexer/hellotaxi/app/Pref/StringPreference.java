@@ -1,4 +1,4 @@
-package com.indexer.hellotaxi.app.Pref;
+package com.indexer.hellotaxi.app.pref;
 
 /**
  * Created by yemonkyaw on 6/19/14.

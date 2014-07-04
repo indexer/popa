@@ -1,11 +1,11 @@
-package com.indexer.hellotaxi.app.Base;
+package com.indexer.hellotaxi.app.base;
 
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.SupportMapFragment;
-import com.indexer.hellotaxi.app.Application.popa;
-import com.indexer.hellotaxi.app.Module.ActivityModule;
+import com.indexer.hellotaxi.app.application.popa;
+import com.indexer.hellotaxi.app.module.ActivityModule;
 import com.indexer.hellotaxi.app.R;
 import dagger.ObjectGraph;
 import java.util.Arrays;

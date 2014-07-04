@@ -1,4 +1,4 @@
-package com.indexer.hellotaxi.app.Ui;
+package com.indexer.hellotaxi.app.ui;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -14,8 +14,8 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.Spinner;
-import com.indexer.hellotaxi.app.Controller.ActivityTitleController;
-import com.indexer.hellotaxi.app.Listener.newPhotoListener;
+import com.indexer.hellotaxi.app.controller.ActivityTitleController;
+import com.indexer.hellotaxi.app.listener.newPhotoListener;
 import com.indexer.hellotaxi.app.R;
 import java.io.FileDescriptor;
 import java.io.IOException;
