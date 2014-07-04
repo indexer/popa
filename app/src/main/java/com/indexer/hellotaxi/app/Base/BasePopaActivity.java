@@ -1,13 +1,16 @@
 package com.indexer.hellotaxi.app.base;
 
 import android.os.Bundle;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.widget.Button;
+import android.widget.EditText;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.indexer.hellotaxi.app.R;
 import com.indexer.hellotaxi.app.application.popa;
 import com.indexer.hellotaxi.app.module.ActivityModule;
-import com.indexer.hellotaxi.app.R;
 import dagger.ObjectGraph;
 import java.util.Arrays;
 import java.util.List;
@@ -15,7 +18,6 @@ import java.util.List;
 public abstract class BasePopaActivity extends ActionBarActivity {
   private ObjectGraph activityGraph;
   private GoogleMap mMap;
-
 
   protected int getLayoutId() {
     return R.layout.activity_main;
@@ -74,5 +76,23 @@ public abstract class BasePopaActivity extends ActionBarActivity {
    */
   public void inject(Object object) {
     activityGraph.inject(object);
+  }
+
+  protected void enableBtn(EditText editText, final Button mBtn) {
+    editText.addTextChangedListener(new TextWatcher() {
+      @Override public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+      }
+
+      @Override public void onTextChanged(CharSequence s, int start, int before, int count) {
+      }
+
+      @Override public void afterTextChanged(Editable s) {
+        if (s.toString().trim().length() == 0) {
+          mBtn.setEnabled(false);
+        } else {
+          mBtn.setEnabled(true);
+        }
+      }
+    });
   }
 }

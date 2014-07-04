@@ -1,19 +1,34 @@
 package com.indexer.hellotaxi.app.ui;
 
+import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.EditText;
 import com.indexer.hellotaxi.app.R;
 import com.indexer.hellotaxi.app.base.BasePopaActivity;
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.EActivity;
+import org.androidannotations.annotations.ViewById;
 
 @EActivity(R.layout.activity_login)
 public class LoginActivity extends BasePopaActivity {
+
+  @ViewById(R.id.btnLogin) Button btnLogin;
+  @ViewById(R.id.userPhoneEditText) EditText userPhoneEditText;
+
   @AfterViews void showLoginUi() {
     ActionBar mActionBar = getSupportActionBar();
     mActionBar.setDisplayHomeAsUpEnabled(true);
     mActionBar.setHomeButtonEnabled(true);
     mActionBar.setIcon(R.drawable.ic_launcher);
+
+    btnLogin.setEnabled(false); // Disable at first place
+    enableBtn(userPhoneEditText, btnLogin);
+  }
+
+  @Override protected void onCreate(Bundle saveInstanceState) {
+    super.onCreate(saveInstanceState);
   }
 
   @Override
@@ -30,6 +45,5 @@ public class LoginActivity extends BasePopaActivity {
   }
 
   @Override protected void start() {
-
   }
 }
