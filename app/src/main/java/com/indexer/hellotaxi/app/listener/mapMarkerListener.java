@@ -15,10 +15,10 @@ import com.indexer.hellotaxi.app.R;
  * Created by yemonkyaw on 5/11/14.
  */
 
-public class mapMarkerListener implements GoogleMap.OnMarkerClickListener {
+public class MapMarkerListener implements GoogleMap.OnMarkerClickListener {
   Activity mActivity;
 
-  public mapMarkerListener(Activity activity) {
+  public MapMarkerListener(Activity activity) {
     mActivity = activity;
   }
 

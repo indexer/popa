@@ -8,10 +8,10 @@ import android.os.Bundle;
 import android.util.Log;
 import com.indexer.hellotaxi.app.ui.MainActivity;
 
-public class mlocationListener implements LocationListener {
+public class LocationListener implements android.location.LocationListener {
   Activity mActivity;
 
-  public mlocationListener(MainActivity mainActivity) {
+  public LocationListener(MainActivity mainActivity) {
     mActivity = mainActivity;
   }
 

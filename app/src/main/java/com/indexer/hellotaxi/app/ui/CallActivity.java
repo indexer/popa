@@ -15,7 +15,7 @@ import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.Spinner;
 import com.indexer.hellotaxi.app.R;
-import com.indexer.hellotaxi.app.listener.newPhotoListener;
+import com.indexer.hellotaxi.app.listener.NewPhotoListener;
 import java.io.FileDescriptor;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -59,7 +59,7 @@ public class CallActivity extends ActionBarActivity {
     ArrayAdapter<String> dataAdapter =
         new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, typeCar);
     carType.setAdapter(dataAdapter);
-    newPhotoListener newPhotoListener = new newPhotoListener(this);
+    NewPhotoListener newPhotoListener = new NewPhotoListener(this);
     imgUser.setOnClickListener(newPhotoListener);
   }
 

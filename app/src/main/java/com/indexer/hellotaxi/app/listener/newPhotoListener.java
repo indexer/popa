@@ -7,10 +7,10 @@ import android.content.Intent;
 import android.view.View;
 import android.widget.ArrayAdapter;
 
-public class newPhotoListener implements View.OnClickListener {
+public class NewPhotoListener implements View.OnClickListener {
   Activity mActivity;
 
-  public newPhotoListener(Activity activity) {
+  public NewPhotoListener(Activity activity) {
     mActivity = activity;
   }
 

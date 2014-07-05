@@ -19,8 +19,8 @@ import com.google.maps.android.ui.IconGenerator;
 
 import com.indexer.hellotaxi.app.R;
 import com.indexer.hellotaxi.app.base.BasePopaActivity;
-import com.indexer.hellotaxi.app.listener.mapMarkerListener;
-import com.indexer.hellotaxi.app.listener.mlocationListener;
+import com.indexer.hellotaxi.app.listener.LocationListener;
+import com.indexer.hellotaxi.app.listener.MapMarkerListener;
 import javax.inject.Inject;
 import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EActivity;
@@ -30,14 +30,14 @@ import org.androidannotations.annotations.ViewById;
 
 @EActivity @OptionsMenu(R.menu.main)
 public class MainActivity extends BasePopaActivity {
-  @Inject LocationManager locationManager;
+  @Inject LocationManager mLocationManager;
   @Inject Criteria mCriteria;
-  @Inject ConnectivityManager connectivityManager;
+  @Inject ConnectivityManager mConnectivityManager;
 
-  mlocationListener mlocationListener = new mlocationListener(this);
+  LocationListener mLocationListener = new LocationListener(this);
   @ViewById(R.id.taxiDriverName) TextView txtDriverName;
 
-  //ToDo map move care to the taxi location
+  // TODO map move care to the taxi location
   @Click(R.id.innerlayout) void changeCard() {
     txtDriverName.setText(
         txtDriverName.getText().equals("Swan Htet Aung") ? "Arar Aung" : "Swan Htet Aung");
@@ -45,30 +45,32 @@ public class MainActivity extends BasePopaActivity {
 
   @Override @UiThread
   protected void start() {
-    //All your normal criteria setup
+    // All your normal criteria setup
     // let Android select the right location provider for you
     getSupportActionBar().setTitle(getResources().getString(R.string.title_activity_call));
-    String myProvider = locationManager.getBestProvider(mCriteria, true);
-    locationManager.requestLocationUpdates(myProvider, 0, 0, mlocationListener);
-    mapMarkerListener mapMarkerListener = new mapMarkerListener(this);
+
+    String myProvider = mLocationManager.getBestProvider(mCriteria, true);
+    mLocationManager.requestLocationUpdates(myProvider, 0, 0, mLocationListener);
+    MapMarkerListener mMarkerListener = new MapMarkerListener(this);
     IconGenerator iconFactory = new IconGenerator(this);
     getMap().setMyLocationEnabled(true);
-    Location location = locationManager.getLastKnownLocation(myProvider);
-    if (location != null) {
+    Location mLocation = mLocationManager.getLastKnownLocation(myProvider);
+
+    if (mLocation != null) {
       getMap().moveCamera(CameraUpdateFactory.newLatLngZoom(
-          new LatLng(location.getLatitude(), location.getLongitude()), 19));
+          new LatLng(mLocation.getLatitude(), mLocation.getLongitude()), 19));
       iconFactory.setStyle(IconGenerator.STYLE_GREEN);
-      addIcon(iconFactory, "3/W", new LatLng(location.getLatitude(), location.getLongitude()));
+      addIcon(iconFactory, "3/W", new LatLng(mLocation.getLatitude(), mLocation.getLongitude()));
       addIcon(iconFactory, "9/C",
-          new LatLng(location.getLatitude() + 0.00002, location.getLongitude() + 0.0005));
-      getMap().setOnMarkerClickListener(mapMarkerListener);
+          new LatLng(mLocation.getLatitude() + 0.00002, mLocation.getLongitude() + 0.0005));
+      getMap().setOnMarkerClickListener(mMarkerListener);
     } else {
-      //ToDo request user location and find near by taxi here
+      // TODO request user location and find near by taxi here
       getMap().moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(16, 96), 19));
     }
   }
 
-  //to show Maker with Customize cluster item theme
+  // To show maker with customize cluster item theme
   private void addIcon(IconGenerator iconFactory, String text, LatLng position) {
     MarkerOptions markerOptions = new MarkerOptions().
         icon(BitmapDescriptorFactory.fromBitmap(iconFactory.makeIcon(text))).
@@ -89,26 +91,22 @@ public class MainActivity extends BasePopaActivity {
       case android.R.id.home:
         this.onBackPressed();
         finish();
-        return false;
-      case R.id.action_add: //thi will going to the Register
+      case R.id.action_add: // This will going to the register
         Intent intentToCallActivity = new Intent(this, CallActivity_.class);
         startActivity(intentToCallActivity);
-        return false;
-      case R.id.action_settings: //this will going to the SettingActiivty
+      case R.id.action_settings: // This will going to the Setting Activity
         Intent intentToSettingActivity = new Intent(this, SettingActivity_.class);
         startActivity(intentToSettingActivity);
-        return false;
       case R.id.action_login:
         Intent intentToLoginActivity = new Intent(this, LoginActivity_.class);
         startActivity(intentToLoginActivity);
-        return false;
     }
     return false;
   }
 
   @Override protected void onDestroy() {
     super.onDestroy();
-    locationManager.removeUpdates(mlocationListener);
+    mLocationManager.removeUpdates(mLocationListener);
   }
 
   @Override protected void onResume() {
