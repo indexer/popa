@@ -32,7 +32,7 @@ import org.androidannotations.annotations.res.StringRes;
 public class CallActivity extends ActionBarActivity {
   Uri mImageUri;
 
-/*  @Inject ActivityTitleController titleController;*/
+  /*  @Inject ActivityTitleController titleController;*/
   @StringRes(R.string.Register) String title;
   @StringArrayRes(R.array.carTypeList) String[] carTypeList;
   @ViewById(R.id.carType) Spinner carType;

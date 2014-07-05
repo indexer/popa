@@ -1,6 +1,5 @@
 package com.indexer.hellotaxi.app.ui;
 
-import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.text.Editable;
@@ -15,7 +14,6 @@ import org.androidannotations.annotations.ViewById;
 
 @EActivity(R.layout.activity_login)
 public class LoginActivity extends ActionBarActivity {
-
   @ViewById(R.id.btnLogin) Button btnLogin;
   @ViewById(R.id.userPhoneEditText) EditText userPhoneEditText;
 
@@ -43,12 +41,6 @@ public class LoginActivity extends ActionBarActivity {
     });
   }
 
-  @Override protected void onCreate(Bundle saveInstanceState) {
-    super.onCreate(saveInstanceState);
-    // btnLogin.setEnabled(false); // Disable at first place
-    // enableBtn(userPhoneEditText, btnLogin);
-  }
-
   @Override
   public boolean onOptionsItemSelected(MenuItem item) {
     // Handle action bar item clicks here. The action bar will
@@ -61,4 +53,6 @@ public class LoginActivity extends ActionBarActivity {
     }
     return false;
   }
+
+
 }

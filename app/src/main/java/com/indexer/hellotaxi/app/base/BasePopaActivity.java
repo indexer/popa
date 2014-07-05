@@ -6,7 +6,6 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.indexer.hellotaxi.app.R;
 import com.indexer.hellotaxi.app.application.popa;
-import com.indexer.hellotaxi.app.module.ActivityModule;
 import dagger.ObjectGraph;
 import java.util.Arrays;
 import java.util.List;
@@ -14,6 +13,7 @@ import java.util.List;
 public abstract class BasePopaActivity extends ActionBarActivity {
   private ObjectGraph activityGraph;
   private GoogleMap mMap;
+
 
   protected int getLayoutId() {
     return R.layout.activity_main;
@@ -64,7 +64,7 @@ public abstract class BasePopaActivity extends ActionBarActivity {
   }
 
   protected List<Object> getModules() {
-    return Arrays.<Object>asList(new ActivityModule(this));
+    return Arrays.<Object>asList(new com.indexer.hellotaxi.app.module.ActivityModule(this));
   }
 
   /**
@@ -73,5 +73,4 @@ public abstract class BasePopaActivity extends ActionBarActivity {
   public void inject(Object object) {
     activityGraph.inject(object);
   }
-
 }

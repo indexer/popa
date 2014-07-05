@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.indexer.hellotaxi.app.ui;
+package com.indexer.hellotaxi.app.Ui;
 
 import android.content.Context;
 import android.content.res.TypedArray;
