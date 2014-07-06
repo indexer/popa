@@ -16,7 +16,6 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.maps.android.ui.IconGenerator;
-
 import com.indexer.hellotaxi.app.R;
 import com.indexer.hellotaxi.app.base.BasePopaActivity;
 import com.indexer.hellotaxi.app.listener.LocationListener;
@@ -96,7 +95,7 @@ public class MainActivity extends BasePopaActivity {
       case R.id.action_settings: // This will going to the Setting Activity
         Intent intentToSettingActivity = new Intent(this, SettingActivity_.class);
         startActivity(intentToSettingActivity);
-        return  false;
+        return false;
       case R.id.action_login:
         Intent intentToLoginActivity = new Intent(this, LoginActivity_.class);
         startActivity(intentToLoginActivity);
