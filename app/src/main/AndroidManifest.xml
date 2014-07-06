@@ -27,7 +27,7 @@
       />
 
   <application
-      android:name=".application.popa_"
+      android:name=".application.Popa_"
       android:allowBackup="true"
       android:icon="@drawable/ic_launcher"
       android:label="@string/app_name"

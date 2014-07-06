@@ -11,20 +11,20 @@ import org.androidannotations.annotations.EApplication;
  * Created by yemonkyaw on 5/10/14.
  */
 @EApplication
-public class popa extends Application {
-  private static popa Popa;
+public class Popa extends Application {
+  private static com.indexer.hellotaxi.app.application.Popa mPopa;
 
   ObjectGraph objectGraph;
 
-  public static popa getInstance() {
-    return Popa;
+  public static com.indexer.hellotaxi.app.application.Popa getInstance() {
+    return mPopa;
   }
 
   @Override
   public void onCreate() {
     super.onCreate();
-    objectGraph = objectGraph.create(getModules().toArray());
-    Popa = this;
+    objectGraph = ObjectGraph.create(getModules().toArray());
+    mPopa = this;
   }
 
   protected List<Object> getModules() {

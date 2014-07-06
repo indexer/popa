@@ -5,7 +5,7 @@ import android.content.Context;
 import android.location.Criteria;
 import android.location.LocationManager;
 import android.net.ConnectivityManager;
-import com.indexer.hellotaxi.app.application.popa;
+import com.indexer.hellotaxi.app.application.Popa;
 import dagger.Module;
 import dagger.Provides;
 import javax.inject.Singleton;
@@ -15,9 +15,9 @@ import javax.inject.Singleton;
  */
 @Module(library = true)
 public class AndroidModule {
-  private popa application;
+  private Popa application;
 
-  public AndroidModule(popa application) {
+  public AndroidModule(Popa application) {
     this.application = application;
   }
 

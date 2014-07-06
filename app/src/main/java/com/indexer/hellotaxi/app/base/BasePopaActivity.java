@@ -5,7 +5,7 @@ import android.support.v7.app.ActionBarActivity;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.indexer.hellotaxi.app.R;
-import com.indexer.hellotaxi.app.application.popa;
+import com.indexer.hellotaxi.app.application.Popa;
 import dagger.ObjectGraph;
 import java.util.Arrays;
 import java.util.List;
@@ -24,7 +24,7 @@ public abstract class BasePopaActivity extends ActionBarActivity {
     super.onCreate(saveInstanceState);
     setContentView(getLayoutId());
     setUpMapIfNeeded();
-    popa application = (popa) getApplication();
+    Popa application = (Popa) getApplication();
     activityGraph = application.getObjectGraph().plus(getModules().toArray());
     activityGraph.inject(this);
   }

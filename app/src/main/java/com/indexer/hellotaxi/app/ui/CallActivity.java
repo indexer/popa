@@ -74,7 +74,7 @@ public class CallActivity extends ActionBarActivity {
     if (data != null) {
       mImageUri = data.getData();
       try {
-        imgUser.setImageBitmap(getBimapFromUri(mImageUri));
+        imgUser.setImageBitmap(getBitmapFromUri(mImageUri));
       } catch (IOException e) {
         e.printStackTrace();
       }
@@ -97,12 +97,12 @@ public class CallActivity extends ActionBarActivity {
     return false;
   }
 
-  private Bitmap getBimapFromUri(Uri mImageUri) throws IOException {
-    ParcelFileDescriptor paracelFileDescriptor;
-    paracelFileDescriptor = getContentResolver().openFileDescriptor(mImageUri, "r");
-    FileDescriptor fileDescriptor = paracelFileDescriptor.getFileDescriptor();
+  private Bitmap getBitmapFromUri(Uri mImageUri) throws IOException {
+    ParcelFileDescriptor mParcelFileDescriptor;
+    mParcelFileDescriptor = getContentResolver().openFileDescriptor(mImageUri, "r");
+    FileDescriptor fileDescriptor = mParcelFileDescriptor.getFileDescriptor();
     Bitmap image = BitmapFactory.decodeFileDescriptor(fileDescriptor);
-    paracelFileDescriptor.close();
+    mParcelFileDescriptor.close();
     return image;
   }
 }

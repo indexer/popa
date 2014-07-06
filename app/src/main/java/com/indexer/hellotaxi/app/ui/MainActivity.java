@@ -79,13 +79,11 @@ public class MainActivity extends BasePopaActivity {
     getMap().addMarker(markerOptions);
   }
 
-  @Override
-  public boolean onCreateOptionsMenu(Menu menu) {
+  @Override public boolean onCreateOptionsMenu(Menu menu) {
     return super.onCreateOptionsMenu(menu);
   }
 
-  @Override
-  public boolean onOptionsItemSelected(MenuItem item) {
+  @Override public boolean onOptionsItemSelected(MenuItem item) {
     int i = item.getItemId();
     switch (i) {
       case android.R.id.home:
