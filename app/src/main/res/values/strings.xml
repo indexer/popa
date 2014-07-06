@@ -2,43 +2,36 @@
 <resources>
 
   <string name="app_name">Popa</string>
-  <string name="hello_world">Hello world!</string>
   <string name="action_settings">Settings</string>
-  <!-- -button -->
-  <string name="Signup">Sign Up</string>
-  <string name="Find">Find</string>
-  <string name="Call">Call</string>
-  <string name="Register">Register</string>
-  <string name="BookNow">Book Now</string>
-  <string name="Setting">Setting</string>
-  <string name="Language">Launguage</string>
 
-  <!-- hint text -->
-  <string name="phonenumber">Phone Number</string>
-  <string name="carnumber">Car Number</string>
-  <string name="username">User Name</string>
-  <string name="rememberlogin">Remember Login ?</string>
+  <!-- Button -->
+  <string name="sign_up">Sign Up</string>
+  <string name="find">Find</string>
+  <string name="call">Call</string>
+  <string name="book_now">Book Now</string>
+  <string name="settings">Settings</string>
+  <string name="language">Language</string>
+
+  <!-- Hint text -->
+  <string name="phone_number">Phone number</string>
+  <string name="car_number">Car number</string>
+  <string name="username">Username</string>
+  <string name="remember_login">Remember login ?</string>
   <string name="enter_phone_number">Enter your phone number</string>
 
   <!-- api url -->
   <!-- ToDo Api Urgnet @Indexer-->
   <string name="base_url"></string>
   <string name="nearby_url">https://maps.googleapis.com/maps/api/place/nearbysearch/json?</string>
-  <string name="companytaxi_url">http://syspopa.com/company/taxi</string>
+  <string name="company_taxi_url">http://syspopa.com/company/taxi</string>
 
-
-  <string name="loginPhone">Phone</string>
-  <string name="title_activity_base_popa">BasePopaActivity</string>
-  <!-- map Title -->
-  <string name="nearby">Near By Taxi</string>
-  <string name="findtaxi">Find Taxi</string>
-  <string name="hello_blank_fragment">Hello</string>
+  <!-- Map Title -->
+  <string name="nearby">Nearby Taxi</string>
+  <string name="find_taxi">Find Taxi</string>
   <string name="title_activity_call">Call The Taxi</string>
-  <string name="taxi_all">All Taxi</string>
+  <string name="all_taxi">All Taxi</string>
   <string name="company_taxi">Company Taxi</string>
-  <string name="login">Login</string>
-  <string name="enterphonenumber">Enter Phone Number</string>
-  <string name="register">REGISTER ?</string>
+  <string name="sign_in">Sign in</string>
   <string name="driver">Driver</string>
   <string name="passenger">Passenger</string>
 
@@ -48,10 +41,7 @@
     <item>Cherry QQ</item>
   </array>
 
-  <string name="languageMyanmar">Myanmar</string>
-  <string name="searchBy">Search By</string>
-  <string name="title_activity_setting">Setting</string>
-  <string name="title_activity_login">Login</string>
-
+  <string name="language_myanmar">Myanmar</string>
+  <string name="search_by">Search By</string>
 
 </resources>

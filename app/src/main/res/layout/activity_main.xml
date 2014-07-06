@@ -114,7 +114,7 @@
           android:layout_marginBottom="@dimen/liner"
           android:textColor="@drawable/btn_text_selector"
           android:textStyle="bold"
-          android:text="@string/BookNow"
+          android:text="@string/book_now"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"/>
     </RelativeLayout>
