@@ -112,7 +112,7 @@
           android:layout_marginLeft="@dimen/liner"
           android:layout_marginRight="@dimen/liner"
           android:layout_marginBottom="@dimen/liner"
-          android:textColor="@drawable/textcolor_selector"
+          android:textColor="@drawable/btn_text_selector"
           android:textStyle="bold"
           android:text="@string/BookNow"
           android:layout_width="match_parent"

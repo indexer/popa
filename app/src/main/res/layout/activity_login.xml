@@ -31,7 +31,7 @@
   <Button
       android:id="@+id/btnLogin"
       android:layout_marginBottom="5dp"
-      android:textColor="@drawable/textcolor_selector"
+      android:textColor="@drawable/btn_text_selector"
       android:background="@drawable/button_book"
       android:layout_below="@+id/loginUserPhone_float"
       android:layout_width="match_parent"
