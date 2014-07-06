@@ -92,12 +92,15 @@ public class MainActivity extends BasePopaActivity {
       case R.id.action_add: // This will going to the register
         Intent intentToCallActivity = new Intent(this, CallActivity_.class);
         startActivity(intentToCallActivity);
+        return false;
       case R.id.action_settings: // This will going to the Setting Activity
         Intent intentToSettingActivity = new Intent(this, SettingActivity_.class);
         startActivity(intentToSettingActivity);
+        return  false;
       case R.id.action_login:
         Intent intentToLoginActivity = new Intent(this, LoginActivity_.class);
         startActivity(intentToLoginActivity);
+        return false;
     }
     return false;
   }

@@ -16,16 +16,20 @@
 package com.indexer.hellotaxi.app.module;
 
 import android.content.Context;
+import com.indexer.hellotaxi.app.ForActivity;
 import com.indexer.hellotaxi.app.base.BasePopaActivity;
 import com.indexer.hellotaxi.app.controller.ActivityTitleController;
-import com.indexer.hellotaxi.app.ForActivity;
+import com.indexer.hellotaxi.app.ui.CallActivity_;
+import com.indexer.hellotaxi.app.ui.LoginActivity_;
+import com.indexer.hellotaxi.app.ui.MainActivity_;
+import com.indexer.hellotaxi.app.ui.SettingActivity_;
 import dagger.Module;
 import dagger.Provides;
 import javax.inject.Singleton;
 
 @Module(
     injects = {
-/*        MainActivity_.class, CallActivity_.class, LoginActivity_.class, SettingActivity_.class*/
+        MainActivity_.class, CallActivity_.class, LoginActivity_.class, SettingActivity_.class
     },
     addsTo = AndroidModule.class,
     library = true)
