@@ -2,7 +2,6 @@
 <resources>
 
   <string name="app_name">Popa</string>
-  <string name="action_settings">Settings</string>
 
   <!-- Button -->
   <string name="sign_up">Sign Up</string>
