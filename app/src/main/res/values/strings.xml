@@ -17,6 +17,7 @@
   <string name="username">Username</string>
   <string name="remember_login">Remember login ?</string>
   <string name="enter_phone_number">Enter your phone number</string>
+  <string name="forgot_your_password">Forgot your password ?</string>
 
   <!-- api url -->
   <!-- ToDo Api Urgnet @Indexer-->
