@@ -19,6 +19,7 @@ import android.content.Context;
 import com.indexer.hellotaxi.app.ForActivity;
 import com.indexer.hellotaxi.app.base.BasePopaActivity;
 import com.indexer.hellotaxi.app.controller.ActivityTitleController;
+import com.indexer.hellotaxi.app.listener.MapMarkerListener;
 import com.indexer.hellotaxi.app.ui.CallActivity_;
 import com.indexer.hellotaxi.app.ui.LoginActivity_;
 import com.indexer.hellotaxi.app.ui.MainActivity_;
@@ -29,7 +30,8 @@ import javax.inject.Singleton;
 
 @Module(
     injects = {
-        MainActivity_.class, CallActivity_.class, LoginActivity_.class, SettingActivity_.class
+        MainActivity_.class, CallActivity_.class, LoginActivity_.class, SettingActivity_.class,
+        MapMarkerListener.class
     },
     addsTo = AndroidModule.class,
     library = true)
@@ -43,6 +45,7 @@ public class ActivityModule {
   @Provides @Singleton @ForActivity Context provideActivityContext() {
     return activity;
   }
+
 
   @Provides @Singleton ActivityTitleController provideTitleController() {
     return new ActivityTitleController(activity);
