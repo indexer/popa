@@ -12,7 +12,7 @@
       android:id="@+id/headerLanguage"
       android:textStyle="bold"
       android:textAppearance="?android:attr/textAppearanceMedium"
-      android:text="@string/Language"
+      android:text="@string/language"
       android:layout_marginBottom="5dp"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"/>
@@ -28,7 +28,7 @@
       android:layout_marginTop="5dp"
       android:layout_below="@+id/view"
       android:id="@+id/selectedLanguage"
-      android:text="@string/languageMyanmar"
+      android:text="@string/language_myanmar"
       android:textColor="?android:attr/textColorSecondary"
       android:textAppearance="?android:attr/textAppearanceMedium"
       android:layout_width="match_parent"
@@ -40,7 +40,7 @@
       android:id="@+id/headerSelect"
       android:textStyle="bold"
       android:textAppearance="?android:attr/textAppearanceMedium"
-      android:text="@string/searchBy"
+      android:text="@string/search_by"
       android:layout_marginBottom="5dp"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"/>
@@ -61,7 +61,7 @@
 
   <CheckBox
       android:id="@+id/chkalltaxi"
-      android:text="@string/taxi_all"
+      android:text="@string/all_taxi"
       android:layout_below="@+id/chknearby"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"/>

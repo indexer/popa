@@ -2,16 +2,16 @@
     xmlns:yourapp="http://schemas.android.com/apk/res-auto">
   <!-- Search, should appear as action button -->
   <item android:id="@+id/action_login"
-      android:title="@string/login"
+      android:title="@string/sign_in"
       yourapp:showAsAction="ifRoom"/>
   <item android:id="@+id/action_add"
-      android:title="@string/Signup"
+      android:title="@string/sign_up"
       android:icon="@android:drawable/ic_input_add"
       android:orderInCategory="100"
       yourapp:showAsAction="never"/>
 
   <item android:id="@+id/action_settings"
-      android:title="@string/Setting"
+      android:title="@string/settings"
       yourapp:showAsAction="never"/>
 
 </menu>

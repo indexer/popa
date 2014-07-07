@@ -49,15 +49,15 @@
       </intent-filter>
     </activity>
     <activity android:name=".ui.CallActivity_"
-        android:label="@string/Register"/>
+        android:label="@string/sign_up"/>
     <activity
         android:name=".ui.SettingActivity_"
-        android:label="@string/title_activity_setting"/>
+        android:label="@string/settings"/>
 
     <activity
         android:name=".ui.LoginActivity_"
         android:icon="@drawable/ic_launcher"
-        android:label="@string/title_activity_login">
+        android:label="@string/sign_in">
     </activity>
   </application>
 </manifest>

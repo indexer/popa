@@ -66,7 +66,7 @@
           android:id="@+id/userPhone"
           android:layout_marginTop="@dimen/circle"
           android:inputType="phone"
-          android:hint="@string/phonenumber"
+          android:hint="@string/phone_number"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"/>
       <Spinner
@@ -84,7 +84,7 @@
           android:layout_marginLeft="@dimen/liner"
           android:layout_marginRight="@dimen/liner"
           android:visibility="gone"
-          android:hint="@string/carnumber"
+          android:hint="@string/car_number"
           android:id="@+id/txtCarNumber"
           android:layout_below="@+id/carType"
           android:layout_marginTop="@dimen/circle"
@@ -100,7 +100,7 @@
           android:layout_marginBottom="@dimen/liner"
           android:textColor="@android:color/white"
           android:textStyle="bold"
-          android:text="@string/Register"
+          android:text="@string/sign_up"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"/>
     </RelativeLayout>
