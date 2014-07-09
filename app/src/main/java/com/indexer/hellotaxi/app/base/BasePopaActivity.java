@@ -14,7 +14,6 @@ public abstract class BasePopaActivity extends ActionBarActivity {
   private ObjectGraph activityGraph;
   private GoogleMap mMap;
 
-
   protected int getLayoutId() {
     return R.layout.activity_main;
   }
