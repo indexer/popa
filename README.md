@@ -38,6 +38,17 @@ git clone git@github.com:indexer/popa.git
 ```
 * You may encounter `NullPointerException` while running the app because of Google Maps. We're aware of that and trying several workarounds to solve it.
 
+
+Contributing
+------------
+
+ 1. Fork it
+ 2. Create your feature branch (`git checkout -b my-new-feature`)
+ 3. Commit your changes (`git commit -am 'Added some feature'`)
+ 4. Push to the branch (`git push origin my-new-feature`)
+ 5. Create new Pull Request
+ 
+
 License
 --------
 
@@ -52,14 +63,3 @@ License
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
     See the License for the specific language governing permissions and
     limitations under the License.
-
-
-
-Contributing
-------------
-
- 1. Fork it
- 2. Create your feature branch (`git checkout -b my-new-feature`)
- 3. Commit your changes (`git commit -am 'Added some feature'`)
- 4. Push to the branch (`git push origin my-new-feature`)
- 5. Create new Pull Request
