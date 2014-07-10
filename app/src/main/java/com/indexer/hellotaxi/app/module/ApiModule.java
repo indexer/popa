@@ -15,7 +15,7 @@ import retrofit.client.OkClient;
  */
 @Module(library = true, complete = false)
 public class ApiModule {
-  public static final String apiServer = "www.google.com";
+  public static final String apiServer = "www.syspopa.com";
 
   @Provides @Singleton Client provideClient(OkHttpClient client) {
     return new OkClient(client);
