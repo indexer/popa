@@ -5,12 +5,11 @@ import android.app.AlertDialog;
 import android.location.Location;
 import android.os.Bundle;
 import android.util.Log;
-import com.indexer.hellotaxi.app.ui.MainActivity;
 
 public class LocationListener implements android.location.LocationListener {
   Activity mActivity;
 
-  public LocationListener(MainActivity mainActivity) {
+  public LocationListener(Activity mainActivity) {
     mActivity = mainActivity;
   }
 

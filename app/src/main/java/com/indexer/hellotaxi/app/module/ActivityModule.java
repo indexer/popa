@@ -46,7 +46,6 @@ public class ActivityModule {
     return activity;
   }
 
-
   @Provides @Singleton ActivityTitleController provideTitleController() {
     return new ActivityTitleController(activity);
   }
