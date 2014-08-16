@@ -12,7 +12,7 @@
     <RelativeLayout
         android:id="@+id/innerlayout"
         android:visibility="gone"
-        android:layout_gravity="bottom|left"
+        android:layout_gravity="bottom|start"
         android:layout_marginTop="@dimen/liner"
         android:layout_marginLeft="@dimen/liner"
         android:layout_marginBottom="@dimen/liner"
@@ -30,7 +30,7 @@
           android:layout_height="130dp"/>
       <TextView
           android:layout_marginTop="@dimen/activity_vertical_margin"
-          android:layout_toEndOf="@id/taxiDriver"
+          android:layout_toRightOf="@id/taxiDriver"
           android:layout_marginLeft="@dimen/activity_horizontal_margin"
           android:id="@+id/taxiDriverName"
           android:textStyle="bold"
@@ -46,7 +46,7 @@
           android:layout_marginTop="@dimen/circle"
           android:layout_marginLeft="@dimen/activity_horizontal_margin"
           android:gravity="center"
-          android:layout_toEndOf="@id/taxiDriver"
+          android:layout_toRightOf="@id/taxiDriver"
           android:layout_width="wrap_content"
           android:textStyle="bold"
           android:textSize="14sp"
@@ -59,7 +59,7 @@
           android:padding="2dp"
           android:textColor="@android:color/white"
           android:background="@drawable/circle_bg_blue"
-          android:layout_toEndOf="@id/taxiDriver"
+          android:layout_toRightOf="@id/taxiDriver"
           android:layout_marginLeft="@dimen/activity_horizontal_margin"
           android:layout_marginTop="@dimen/circle"
           android:text="Type"
@@ -70,7 +70,7 @@
           android:layout_height="25dp"/>
 
       <TextView
-          android:layout_toEndOf="@+id/taxiType"
+          android:layout_toRightOf="@+id/taxiType"
           android:layout_below="@+id/Rate"
           android:layout_marginTop="@dimen/circle"
           android:id="@+id/taxiTypeCar"
@@ -85,7 +85,7 @@
           android:id="@+id/taxiNo"
           android:textColor="@android:color/white"
           android:background="@drawable/circle_bg"
-          android:layout_toEndOf="@id/taxiDriver"
+          android:layout_toRightOf="@+id/taxiDriver"
           android:layout_marginLeft="@dimen/activity_horizontal_margin"
           android:layout_marginTop="@dimen/circle"
           android:text="Number"
@@ -96,7 +96,7 @@
           android:layout_width="wrap_content"
           android:layout_height="25dp"/>
       <TextView
-          android:layout_toEndOf="@+id/taxiNo"
+          android:layout_toRightOf="@+id/taxiNo"
           android:layout_below="@+id/taxiType"
           android:layout_marginTop="@dimen/circle"
           android:id="@+id/taxiCarNo"
